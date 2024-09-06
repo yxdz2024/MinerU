@@ -38,3 +38,5 @@ ocr_demo
 source.dev.env
 
 .vs
+
+temp_files

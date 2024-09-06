@@ -5,6 +5,7 @@ import shutil
 import sys
 import json
 import copy
+from configs.base_config import ALLOW_ORIGINS, VERSION, MAGIC_PDF_IMG_URL
 
 from domain.dto.base_dto import BaseResultModel
 from domain.dto.output.magic_pdf_parse_main_output import ImageData, MagicPdfParseMainOutput
@@ -16,6 +17,7 @@ import base64
 import uvicorn
 from fastapi import  Body, FastAPI, File, Form, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from loguru import logger
 
@@ -28,11 +30,9 @@ import magic_pdf.model as model_config
 model_config.__use_inside_model__ = True
 
 def create_app(run_mode: str = None):
-    ALLOW_ORIGINS=["*"]
-
     app = FastAPI(
         title="MinerU API Server",
-        version="0.0.1",
+        version=VERSION,
         docs_url="/swagger",
         redoc_url="/redoc",
     )
@@ -46,29 +46,35 @@ def create_app(run_mode: str = None):
     )
     mount_app_routes(app, run_mode=run_mode)
     
+    app.mount("/temp_files", StaticFiles(directory="temp_files"), name="temp_files")
+
     return app
 
 def read_md_dump(pipe,
         output_image_path,
+        pdf_name,
         content_list,
         md_content) -> MagicPdfParseMainOutput: 
 
+    '''
     # 写入模型结果
     orig_model_list = copy.deepcopy(pipe.model_list)
     model=orig_model_list
-    #json.dumps(orig_model_list, ensure_ascii=False, indent=4)
-
+    '''
+    
+    '''
     # 写入中间结果
     middle=pipe.pdf_mid_data
-    #json.dumps(pipe.pdf_mid_data, ensure_ascii=False, indent=4)
-
+    '''
+    
     # text文本结果写入
     content_list=content_list
-    #json.dumps(content_list, ensure_ascii=False, indent=4)
 
+    '''
     # 写入结果到 .md 文件中
     md=md_content
-
+    '''
+    
     # 读取图片
     images = []
     for filename in os.listdir(output_image_path):
@@ -76,11 +82,16 @@ def read_md_dump(pipe,
         if os.path.isfile(file_path):
             with open(file_path, 'rb') as file:
                 file_data = file.read()
+                '''
                 encoded_data = base64.b64encode(file_data).decode('utf-8')
                 image_data = ImageData(name=filename, data=encoded_data)
+                '''
+                url = f"{MAGIC_PDF_IMG_URL}/{pdf_name}/images/{filename}"
+                image_data = ImageData(name=filename, url=url)
                 images.append(image_data)
 
-    return MagicPdfParseMainOutput(model=model, middle=middle, content_list=content_list, md=md, images=images)
+    #return MagicPdfParseMainOutput(model=model, middle=middle, content_list=content_list, md=md, images=images)
+    return MagicPdfParseMainOutput(content_list=content_list, images=images)            
 
 def mount_app_routes(app: FastAPI, run_mode: str = None):
     @app.post("/magic_pdf/magic_pdf_parse_main",description="pdf解析",tags=["magic_pdf"])
@@ -144,10 +155,10 @@ def mount_app_routes(app: FastAPI, run_mode: str = None):
             content_list = pipe.pipe_mk_uni_format(image_path_parent, drop_mode="none")
             md_content = pipe.pipe_mk_markdown(image_path_parent, drop_mode="none")
 
-            result.data=read_md_dump(pipe, output_image_path, content_list, md_content)
+            result.data=read_md_dump(pipe, output_image_path, new_pdf_name, content_list, md_content)
 
             # 清除文件夹
-            shutil.rmtree(output_path)
+            # shutil.rmtree(output_path)
 
             return result
 

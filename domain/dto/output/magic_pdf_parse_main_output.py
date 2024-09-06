@@ -4,13 +4,14 @@ import base64
 
 class ImageData(BaseModel):
     name: str
-    data: str # base64
+    #data: str # base64
+    url: str
 
 class MagicPdfParseMainOutput(BaseModel): 
-    model: List[Dict[str, Any]]
-    middle: Dict[str, Any]
+    #model: List[Dict[str, Any]]
+    #middle: Dict[str, Any]
     content_list: List[Dict[str, Any]]
-    md: str
+    #md: str
     images: List[ImageData]
     
     
