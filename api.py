@@ -77,18 +77,19 @@ def read_md_dump(pipe,
     
     # 读取图片
     images = []
-    for filename in os.listdir(output_image_path):
-        file_path = os.path.join(output_image_path, filename)
-        if os.path.isfile(file_path):
-            with open(file_path, 'rb') as file:
-                file_data = file.read()
-                '''
-                encoded_data = base64.b64encode(file_data).decode('utf-8')
-                image_data = ImageData(name=filename, data=encoded_data)
-                '''
-                url = f"{MAGIC_PDF_IMG_URL}/{pdf_name}/images/{filename}"
-                image_data = ImageData(name=filename, url=url)
-                images.append(image_data)
+    if os.path.exists(output_image_path):
+        for filename in os.listdir(output_image_path):
+            file_path = os.path.join(output_image_path, filename)
+            if os.path.isfile(file_path):
+                with open(file_path, 'rb') as file:
+                    file_data = file.read()
+                    '''
+                    encoded_data = base64.b64encode(file_data).decode('utf-8')
+                    image_data = ImageData(name=filename, data=encoded_data)
+                    '''
+                    url = f"{MAGIC_PDF_IMG_URL}/{pdf_name}/images/{filename}"
+                    image_data = ImageData(name=filename, url=url)
+                    images.append(image_data)
 
     #return MagicPdfParseMainOutput(model=model, middle=middle, content_list=content_list, md=md, images=images)
     return MagicPdfParseMainOutput(content_list=content_list, images=images)            
