@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8502:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./temp_files:/path/to/temp_files
