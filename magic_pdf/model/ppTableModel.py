@@ -1,3 +1,4 @@
+import cv2
 from paddleocr.ppstructure.table.predict_table import TableSystem
 from paddleocr.ppstructure.utility import init_args
 from magic_pdf.libs.Constants import *
@@ -36,12 +37,13 @@ class ppTableModel(object):
         - HTML (str): A string representing the HTML structure with content of the table.
         """
         if isinstance(image, Image.Image):
-            image = np.array(image)
+            image = np.asarray(image)
+            image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
         pred_res, _ = self.table_sys(image)
         pred_html = pred_res["html"]
-        res = '<td><table  border="1">' + pred_html.replace("<html><body><table>", "").replace("</table></body></html>",
-                                                                                               "") + "</table></td>\n"
-        return res
+        # res = '<td><table  border="1">' + pred_html.replace("<html><body><table>", "").replace(
+        # "</table></body></html>","") + "</table></td>\n"
+        return pred_html
 
     def parse_args(self, **kwargs):
         parser = init_args()
@@ -52,11 +54,11 @@ class ppTableModel(object):
         rec_model_dir = os.path.join(model_dir, REC_MODEL_DIR)
         rec_char_dict_path = os.path.join(model_dir, REC_CHAR_DICT)
         device = kwargs.get("device", "cpu")
-        use_gpu = True if device == "cuda" else False
+        use_gpu = True if device.startswith("cuda") else False
         config = {
             "use_gpu": use_gpu,
             "table_max_len": kwargs.get("table_max_len", TABLE_MAX_LEN),
-            "table_algorithm": TABLE_MASTER,
+            "table_algorithm": "TableMaster",
             "table_model_dir": table_model_dir,
             "table_char_dict_path": table_char_dict_path,
             "det_model_dir": det_model_dir,
