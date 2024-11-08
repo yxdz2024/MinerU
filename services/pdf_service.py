@@ -169,12 +169,14 @@ async def magic_pdf_parse_main_batch(
     folder_path = 'batch_files' # 读取文件夹中的所有文件 
     for root, dirs, files in os.walk(folder_path): 
         for file_name in files:
-            file_path = os.path.join(root, file_name)
-            with open(file_path, "rb") as file:
-                file_data = file.read()
-                file_bytes = io.BytesIO(file_data)
-                upload_file = UploadFile(file=file_bytes, filename=file_name)
-                upload_files.append(upload_file)
+            ext=input.file.filename.rsplit('.', 1)[1]
+            if ext.lower() in ["pdf"]:
+                file_path = os.path.join(root, file_name)
+                with open(file_path, "rb") as file:
+                    file_data = file.read()
+                    file_bytes = io.BytesIO(file_data)
+                    upload_file = UploadFile(file=file_bytes, filename=file_name)
+                    upload_files.append(upload_file)
 
     print(f"批处理:完成加载本地文件")
 
@@ -194,6 +196,9 @@ async def magic_pdf_parse_main_batch(
 
         index=index+1
 
-    print(f"批处理:完成处理本地文件")
+    compelete_str = "批处理:完成处理本地文件。"
+    if len(error_file) > 0:
+        compelete_str = compelete_str + f"失败文件有 {",".join(error_file)}"
+    print(compelete_str)
 
     return result
