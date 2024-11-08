@@ -169,7 +169,7 @@ async def magic_pdf_parse_main_batch(
     folder_path = 'batch_files' # 读取文件夹中的所有文件 
     for root, dirs, files in os.walk(folder_path): 
         for file_name in files:
-            ext=input.file.filename.rsplit('.', 1)[1]
+            ext=file_name.rsplit('.', 1)[1]
             if ext.lower() in ["pdf"]:
                 file_path = os.path.join(root, file_name)
                 with open(file_path, "rb") as file:
