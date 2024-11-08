@@ -198,7 +198,7 @@ async def magic_pdf_parse_main_batch(
 
     compelete_str = "批处理:完成处理本地文件。"
     if len(error_file) > 0:
-        compelete_str = compelete_str + f"失败文件有 {",".join(error_file)}"
+        compelete_str = compelete_str + f"失败文件有 {','.join(error_file)}"
     print(compelete_str)
 
     return result
