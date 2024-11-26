@@ -53,3 +53,5 @@ _build/
 
 temp_files
 batch_files
+
+output/
