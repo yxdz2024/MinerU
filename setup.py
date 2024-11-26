@@ -47,8 +47,14 @@ if __name__ == '__main__':
                      "einops",  # struct-eqtable依赖
                      "accelerate",  # struct-eqtable依赖
                      "doclayout_yolo==0.0.2",  # doclayout_yolo
+                     "rapidocr-paddle",  # rapidocr-paddle
+                     "rapid_table",  # rapid_table
+                     "PyYAML",  # yaml
                      "detectron2"
                      ],
+            "old_linux":[
+                "albumentations<=1.4.20", # 1.4.21引入的simsimd不支持2019年及更早的linux系统
+            ]
         },
         description="A practical tool for converting PDF to Markdown",  # 简短描述
         long_description=long_description,  # 详细描述
