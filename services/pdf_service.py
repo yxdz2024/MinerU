@@ -12,7 +12,7 @@ from domain.dto.output.magic_pdf_parse_main_output import ImageData, MagicPdfPar
 from magic_pdf.pipe.UNIPipe import UNIPipe
 from magic_pdf.pipe.OCRPipe import OCRPipe
 from magic_pdf.pipe.TXTPipe import TXTPipe
-from magic_pdf.rw.DiskReaderWriter import DiskReaderWriter
+from magic_pdf.data.data_reader_writer import FileBasedDataWriter
 import magic_pdf.model as model_config
 
 from loguru import logger
@@ -61,16 +61,16 @@ async def read_md_dump(pipe,
 
     
     if is_save_local ==True:
-        md_writer=DiskReaderWriter(local_output_path)
+        md_writer=FileBasedDataWriter(local_output_path)
 
-        md_writer.write(
-            content=json.dumps(content_list, ensure_ascii=False, indent=4),
-            path=f"{odl_pdf_name}_content_list.json"
+        md_writer.write_string(
+            f"{odl_pdf_name}_content_list.json",
+            json.dumps(content_list, ensure_ascii=False, indent=4)
         )
 
-        md_writer.write(
-            content=json.dumps([row.__dict__ for row in images], ensure_ascii=False, indent=4),
-            path=f"{odl_pdf_name}_images.json"
+        md_writer.write_string(
+            f"{odl_pdf_name}_images.json",
+            json.dumps([row.__dict__ for row in images], ensure_ascii=False, indent=4),
         )
 
     #return MagicPdfParseMainOutput(model=model, middle=middle, content_list=content_list, md=md, images=images)
@@ -111,7 +111,7 @@ async def magic_pdf_parse_main(
         model_json = []
     
         # 执行解析步骤
-        image_writer, md_writer = DiskReaderWriter(output_image_path), DiskReaderWriter(output_path)
+        image_writer, md_writer = FileBasedDataWriter(output_image_path), FileBasedDataWriter(output_path)
     
         # 选择解析方式
         if parse_method == "auto":
