@@ -1,4 +1,5 @@
 from fastapi import UploadFile
+from fastapi.responses import JSONResponse
 import os
 import json
 import io
@@ -9,11 +10,12 @@ from configs.base_config import MAGIC_PDF_IMG_URL
 from domain.dto.base_dto import BaseResultModel
 from domain.dto.output.magic_pdf_parse_main_output import ImageData, MagicPdfParseMainOutput
 
-from magic_pdf.pipe.UNIPipe import UNIPipe
-from magic_pdf.pipe.OCRPipe import OCRPipe
-from magic_pdf.pipe.TXTPipe import TXTPipe
-from magic_pdf.data.data_reader_writer import FileBasedDataWriter
 import magic_pdf.model as model_config
+from magic_pdf.config.enums import SupportedPdfParseMethod
+from magic_pdf.data.data_reader_writer import FileBasedDataWriter
+from magic_pdf.data.dataset import PymuDocDataset
+from magic_pdf.model.doc_analyze_by_custom_model import doc_analyze
+from magic_pdf.operators.models import InferenceResult
 
 from loguru import logger
 
@@ -113,6 +115,7 @@ async def magic_pdf_parse_main(
         # 执行解析步骤
         image_writer, md_writer = FileBasedDataWriter(output_image_path), FileBasedDataWriter(output_path)
     
+        '''
         # 选择解析方式
         if parse_method == "auto":
             jso_useful_key = {"_pdf_type": "", "model_list": model_json}
@@ -123,25 +126,46 @@ async def magic_pdf_parse_main(
             pipe = OCRPipe(pdf_bytes, model_json, image_writer)
         else:
             raise Exception("unknown parse method, only auto, ocr, txt allowed")
+        '''
     
-        # 执行分类
-        pipe.pipe_classify()
-    
-        # 如果没有传入模型数据，则使用内置模型解析
-        if not model_json:
-            if model_config.__use_inside_model__:
-                pipe.pipe_analyze()  # 解析
+        ds = PymuDocDataset(pdf_bytes)
+        # Choose parsing method
+        if parse_method == 'auto':
+            if ds.classify() == SupportedPdfParseMethod.OCR:
+                parse_method = 'ocr'
             else:
-                raise Exception("unknown parse method, only auto, ocr, txt allowed")
-    
-        # 执行解析
-        pipe.pipe_parse()
+                parse_method = 'txt'
+
+        if parse_method not in ['txt', 'ocr']:
+            logger.error('Unknown parse method, only auto, ocr, txt allowed')
+            return JSONResponse(
+                content={'error': 'Invalid parse method'}, status_code=400
+            )
+
+        if len(model_json) == 0:
+            if parse_method == 'ocr':
+                infer_result = ds.apply(doc_analyze, ocr=True)
+            else:
+                infer_result = ds.apply(doc_analyze, ocr=False)
+
+        else:
+            infer_result = InferenceResult(model_json, ds)
+
+        if len(model_json) == 0 and not model_config.__use_inside_model__:
+                logger.error('Need model list input')
+                return JSONResponse(
+                    content={'error': 'Model list input required'}, status_code=400
+                )
+        if parse_method == 'ocr':
+            pipe_res = infer_result.pipe_ocr_mode(image_writer)
+        else:
+            pipe_res = infer_result.pipe_txt_mode(image_writer)
     
         # 保存 text 和 md 格式的结果
-        content_list = pipe.pipe_mk_uni_format(image_path_parent, drop_mode="none")
-        md_content = pipe.pipe_mk_markdown(image_path_parent, drop_mode="none")
+        content_list = pipe_res.get_content_list(image_path_parent, drop_mode="none")
+        md_content = pipe_res.get_markdown(image_path_parent, drop_mode="none")
     
-        result.data=await read_md_dump(pipe, output_image_path, new_pdf_name, content_list, md_content, file.filename, is_save_local, local_output_path)
+        result.data=await read_md_dump(pipe_res, output_image_path, new_pdf_name, content_list, md_content, file.filename, is_save_local, local_output_path)
     
         # 清除文件夹
         # shutil.rmtree(output_path)
