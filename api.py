@@ -63,9 +63,11 @@ def mount_app_routes(app: FastAPI, run_mode: str = None):
     # pdf解析(批处理)
     @app.post("/magic_pdf/magic_pdf_parse_main_batch",description="pdf解析(批处理batch_files下的文件)",tags=["magic_pdf"])
     async def magic_pdf_parse_main_batch(
-        parse_method: str = Form('auto')):
+        folder_path:str="",
+        parse_method: str = Form('ocr')
+        ):
         
-        return await pdf_service.magic_pdf_parse_main_batch(parse_method)
+        return await pdf_service.magic_pdf_parse_main_batch(parse_method=parse_method,folder_path=folder_path)
 
 
 if __name__=="__main__":
