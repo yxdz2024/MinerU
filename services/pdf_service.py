@@ -1,3 +1,5 @@
+from pathlib import Path
+import shutil
 from typing import List
 from fastapi import UploadFile
 from fastapi.responses import JSONResponse
@@ -213,20 +215,26 @@ async def magic_pdf_parse_main2(file:UploadFile,
 
         pdf_name = file.filename
 
-        name_without_suff = pdf_name.split(".")[0]
+        name_without_suff = Path(pdf_name).stem
 
-
+        #文件输出的目录
         output_path = os.path.join(local_output_path, name_without_suff)
-        
+        #图片输出的目录
         output_image_path = os.path.join(output_path, 'images')
-
-        image_dir = str(os.path.basename(output_image_path))
-            # 获取图片的父路径，为的是以相对路径保存到 .md 和 conent_list.json 文件中
-        image_path_parent = os.path.basename(output_image_path)
 
         pdf_bytes = await file.read()  # 读取 pdf 文件的二进制数据
 
-        model_json = []
+        # 如果目标目录不存在，则创建目录
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+        
+        #把文件复制到目标文件夹
+        copy_file_path=os.path.join(output_path,pdf_name)
+
+        # 写入本地文件
+        with open(copy_file_path, "wb") as f:
+            f.write(pdf_bytes)
+
 
         # 执行解析步骤
         image_writer, md_writer = FileBasedDataWriter(output_image_path), FileBasedDataWriter(local_output_path)
@@ -276,6 +284,8 @@ async def magic_pdf_parse_main2(file:UploadFile,
 
         ### dump content list
         pipe_res.dump_content_list(md_writer, os.path.join(name_without_suff,f"{name_without_suff}_content_list.json"), name_without_suff)
+        
+
 
         return result
     
@@ -286,7 +296,11 @@ async def magic_pdf_parse_main2(file:UploadFile,
         result.msg="处理异常"
         return result
 
+async def upload(file:UploadFile):
     
+
+    return magic_pdf_parse_main2()
+
 
 
 async def magic_pdf_parse_main_batch(
@@ -316,8 +330,8 @@ async def magic_pdf_parse_main_batch(
     for root, _, files in os.walk(folder_path):
         for file_name in files:
             # 文件名去除_layout.pdf或其他干扰，避免误处理文件
-            if file_name.endswith(".pdf") and "_layout" not in file_name:
-                name_without_suff = file_name.replace(".pdf", "")
+            if file_name.lower().endswith(".pdf") and "_layout" not in file_name:
+                name_without_suff = Path(file_name).stem
                 if name_without_suff not in processed_files:
                     file_path = os.path.join(root, file_name)
                     with open(file_path, "rb") as file:

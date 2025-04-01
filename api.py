@@ -69,6 +69,14 @@ def mount_app_routes(app: FastAPI, run_mode: str = None):
         
         return await pdf_service.magic_pdf_parse_main_batch(parse_method=parse_method,folder_path=folder_path)
 
+    @app.post("/magic_pdf/upload",description="文件上传",tags=["magic_pdf"])
+    async def upload(
+            folder_path:str="file_upload",
+            file:UploadFile=File(...),
+        ):
+        
+        return await pdf_service.magic_pdf_parse_main2(file=file,local_output_path=folder_path)
+
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser(prog='MinerUSideCar',
