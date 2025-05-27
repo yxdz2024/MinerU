@@ -26,10 +26,10 @@ from loguru import logger
 
 def create_app(run_mode: str = None):
     app = FastAPI(
-        title="MinerU API Server",
+        title="API Server",
         version=VERSION,
-        docs_url="/swagger",
-        redoc_url="/redoc",
+        docs_url=None,
+        redoc_url=None,
     )
 
     app.add_middleware(
