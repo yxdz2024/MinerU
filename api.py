@@ -26,10 +26,10 @@ from loguru import logger
 
 def create_app(run_mode: str = None):
     app = FastAPI(
-        title="MinerU API Server",
+        title="API Server",
         version=VERSION,
-        docs_url="/swagger",
-        redoc_url="/redoc",
+        #docs_url="/swagger",
+        #redoc_url="/redoc",
     )
 
     app.add_middleware(
@@ -47,7 +47,7 @@ def create_app(run_mode: str = None):
 
 def mount_app_routes(app: FastAPI, run_mode: str = None):
     # pdf解析
-    @app.post("/magic_pdf/magic_pdf_parse_main",description="pdf解析",tags=["magic_pdf"])
+    @app.post("/magic_pdf/magic_pdf_parse_main",description="pdf解析",tags=["Api"])
     async def magic_pdf_parse_main(
         file:UploadFile=File(...),
         parse_method: str = Form('auto')):
@@ -61,7 +61,7 @@ def mount_app_routes(app: FastAPI, run_mode: str = None):
         return await pdf_service.magic_pdf_parse_main(file, parse_method)
 
     # pdf解析(批处理)
-    @app.post("/magic_pdf/magic_pdf_parse_main_batch",description="pdf解析(批处理batch_files下的文件)",tags=["magic_pdf"])
+    @app.post("/magic_pdf/magic_pdf_parse_main_batch",description="pdf解析(批处理batch_files下的文件)",tags=["Api"])
     async def magic_pdf_parse_main_batch(
         folder_path:str="",
         parse_method: str = Form('ocr')
@@ -69,7 +69,7 @@ def mount_app_routes(app: FastAPI, run_mode: str = None):
         
         return await pdf_service.magic_pdf_parse_main_batch(parse_method=parse_method,folder_path=folder_path)
 
-    @app.post("/magic_pdf/upload",description="文件上传",tags=["magic_pdf"])
+    @app.post("/magic_pdf/upload",description="文件上传",tags=["Api"])
     async def upload(
             folder_path:str="file_upload",
             file:UploadFile=File(...),
@@ -79,8 +79,8 @@ def mount_app_routes(app: FastAPI, run_mode: str = None):
 
 
 if __name__=="__main__":
-    parser = argparse.ArgumentParser(prog='MinerUSideCar',
-                                     description='MinerUSidCar')
+    parser = argparse.ArgumentParser(prog='ApiSideCar',
+                                     description='ApiSideCar')
     parser.add_argument("--host", type=str, default="0.0.0.0")
     parser.add_argument("--port", type=int, default=8090)
     parser.add_argument("--ssl_keyfile", type=str)
