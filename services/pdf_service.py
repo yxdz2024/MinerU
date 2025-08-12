@@ -19,6 +19,7 @@ from magic_pdf.data.data_reader_writer import FileBasedDataWriter
 from magic_pdf.data.dataset import PymuDocDataset
 from magic_pdf.model.doc_analyze_by_custom_model import doc_analyze
 from magic_pdf.operators.models import InferenceResult
+from mineru.utils.enum_class import MakeMode
 
 from loguru import logger
 
@@ -96,6 +97,11 @@ async def magic_pdf_parse_main(
     :param local_output_path: 本地保存地址
     """
     
+    p_lang_list: list[str] # List of languages for each PDF, default is 'ch' (Chinese)
+    backend="pipeline" # The backend for parsing PDF, default is 'pipeline'
+    formula_enable=True
+    table_enable=True
+
     result=BaseResultModel()
     
     try:
@@ -197,6 +203,21 @@ async def magic_pdf_parse_main2(file:UploadFile,
     parse_method: str="auto",
     is_save_local: bool=True,
     local_output_path: str=None,
+    p_lang_list: list[str]=None,
+    backend="pipeline",
+    formula_enable=True,
+    table_enable=True,
+    server_url=None,
+    f_draw_layout_bbox=True,
+    f_draw_span_bbox=True,
+    f_dump_md=True,
+    f_dump_middle_json=True,
+    f_dump_model_output=True,
+    f_dump_orig_pdf=True,
+    f_dump_content_list=True,
+    f_make_md_mode=MakeMode.MM_MD,
+    start_page_id=0,
+    end_page_id=None
     ) ->BaseResultModel:
 
     """
