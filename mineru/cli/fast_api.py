@@ -180,6 +180,8 @@ def main(ctx, host, port, reload, **kwargs):
     # 将配置参数存储到应用状态中
     app.state.config = kwargs
 
+    os.environ["MINERU_MODEL_SOURCE"] = "modelscope"
+
     """启动MinerU FastAPI服务器的命令行入口"""
     print(f"Start MinerU FastAPI Service: http://{host}:{port}")
     print("The API documentation can be accessed at the following address:")

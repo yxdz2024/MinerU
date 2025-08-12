@@ -28,8 +28,8 @@ def create_app(run_mode: str = None):
     app = FastAPI(
         title="API Server",
         version=VERSION,
-        docs_url=None,
-        redoc_url=None,
+        #docs_url=None,
+        #redoc_url=None,
     )
 
     app.add_middleware(
@@ -85,6 +85,9 @@ if __name__=="__main__":
     parser.add_argument("--port", type=int, default=8090)
     parser.add_argument("--ssl_keyfile", type=str)
     parser.add_argument("--ssl_certfile", type=str)
+
+    os.environ["MINERU_MODEL_SOURCE"] = "local"
+
     # 初始化消息
     args = parser.parse_args()
     args_dict = vars(args)
