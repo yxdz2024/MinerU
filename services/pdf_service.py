@@ -58,7 +58,7 @@ async def magic_pdf_parse_main(
     is_save_local: bool=False,
     local_output_path: str=None,
     lang_list: list[str] = ["ch"],
-    backend="pipeline",
+    backend="vlm-sglang-engine",
     formula_enable=True,
     table_enable=True,
     server_url=None,
@@ -68,7 +68,7 @@ async def magic_pdf_parse_main(
     return_content_list=True,
     return_images=False,
     start_page_id=0,
-    end_page_id=99999,
+    end_page_id=None,
     config={}
     ) ->BaseResultModel:
 
@@ -79,7 +79,7 @@ async def magic_pdf_parse_main(
     :param is_save_local: 是否把输出的内容保存在本地
     :param local_output_path: 本地保存地址
     :param p_lang_list: List of languages for each PDF, default is 'ch' (Chinese)
-    :param backend: The backend for parsing PDF, default is 'pipeline'
+    :param backend: The backend for parsing PDF, default is 'pipeline'。"pipeline", "vlm-transformers", "vlm-sglang-engine", "vlm-sglang-client"
     :param formula_enable: Enable formula parsing
     :param table_enable: Enable table parsing
     :param server_url: Server URL for vlm-sglang-client backend
