@@ -438,7 +438,8 @@ async def upload(file:UploadFile):
 
 async def magic_pdf_parse_main_batch(
     folder_path:str="",
-    parse_method: str="auto"
+    parse_method: str="auto",
+    lang_list: list[str] = ["ch"]
     ) ->BaseResultModel:
     result=BaseResultModel()
 
@@ -483,7 +484,7 @@ async def magic_pdf_parse_main_batch(
     index=1
     for upload_file in upload_files:
         print(f"批处理:正在处理文件 {upload_file.filename} {index}/{total}")
-        magic_pdf_parse_main_result = await magic_pdf_parse_main2(upload_file, parse_method, True, folder_path)
+        magic_pdf_parse_main_result = await magic_pdf_parse_main2(upload_file, parse_method, True, folder_path, lang_list=lang_list)
         if magic_pdf_parse_main_result.code != 200:
             error_file.append(upload_file.filename)
             print(f"批处理:异常处理文件 {upload_file.filename} {index}/{total}")
