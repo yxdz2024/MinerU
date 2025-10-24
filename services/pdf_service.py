@@ -7,51 +7,21 @@ import os
 import json
 import io
 import uuid
+from typing import List, Optional
+from glob import glob
+from base64 import b64encode
 
 from configs.base_config import MAGIC_PDF_IMG_URL
 
 from domain.dto.base_dto import BaseResultModel
 from domain.dto.output.magic_pdf_parse_main_output import ImageData, MagicPdfParseMainOutput
 
-import magic_pdf.model as model_config
-from magic_pdf.config.enums import SupportedPdfParseMethod
-from magic_pdf.data.data_reader_writer import FileBasedDataWriter
-from magic_pdf.data.dataset import PymuDocDataset
-from magic_pdf.model.doc_analyze_by_custom_model import doc_analyze
-from magic_pdf.operators.models import InferenceResult
+from mineru.utils.enum_class import MakeMode
+from mineru.cli.common import aio_do_parse, read_fn, pdf_suffixes, image_suffixes
 
 from loguru import logger
 
-model_config.__use_inside_model__ = True
-
-async def read_md_dump(pipe,
-        output_image_path,
-        pdf_name,
-        content_list,
-        md_content,
-        odl_pdf_name,
-        is_save_local,
-        local_output_path) -> MagicPdfParseMainOutput: 
-
-    '''
-    # 写入模型结果
-    orig_model_list = copy.deepcopy(pipe.model_list)
-    model=orig_model_list
-    '''
-    
-    '''
-    # 写入中间结果
-    middle=pipe.pdf_mid_data
-    '''
-    
-    # text文本结果写入
-    content_list=content_list
-
-    '''
-    # 写入结果到 .md 文件中
-    md=md_content
-    '''
-    
+async def read_md_dump(output_image_path, content_list)-> MagicPdfParseMainOutput: 
     # 读取图片
     images = []
     if os.path.exists(output_image_path):
@@ -60,32 +30,46 @@ async def read_md_dump(pipe,
             if os.path.isfile(file_path):
                 with open(file_path, 'rb') as file:
                     file_data = file.read()
-                    url = f"{MAGIC_PDF_IMG_URL}/{pdf_name}/images/{filename}"
+                    output_image_path_url=output_image_path.replace("\\", "/")
+                    url = f"{MAGIC_PDF_IMG_URL}/{output_image_path_url}/{filename}"
                     image_data = ImageData(name=filename, url=url)
                     images.append(image_data)
 
-    
-    if is_save_local ==True:
-        md_writer=FileBasedDataWriter(local_output_path)
+    de_content_list = json.loads(content_list)
 
-        md_writer.write_string(
-            f"{odl_pdf_name}_content_list.json",
-            json.dumps(content_list, ensure_ascii=False, indent=4)
-        )
+    return MagicPdfParseMainOutput(content_list=de_content_list, images=images)         
 
-        md_writer.write_string(
-            f"{odl_pdf_name}_images.json",
-            json.dumps([row.__dict__ for row in images], ensure_ascii=False, indent=4),
-        )
+def encode_image(image_path: str) -> str:
+    """Encode image using base64"""
+    with open(image_path, "rb") as f:
+        return b64encode(f.read()).decode()
 
-    #return MagicPdfParseMainOutput(model=model, middle=middle, content_list=content_list, md=md, images=images)
-    return MagicPdfParseMainOutput(content_list=content_list, images=images)            
+def get_infer_result(file_suffix_identifier: str, pdf_name: str, parse_dir: str) -> Optional[str]:
+    """从结果文件中读取推理结果"""
+    result_file_path = os.path.join(parse_dir, f"{pdf_name}{file_suffix_identifier}")
+    if os.path.exists(result_file_path):
+        with open(result_file_path, "r", encoding="utf-8") as fp:
+            return fp.read()
+    return None
 
 async def magic_pdf_parse_main(
     file:UploadFile,
     parse_method: str="auto",
     is_save_local: bool=False,
     local_output_path: str=None,
+    lang_list: list[str] = ["ch"],
+    backend="vlm-sglang-engine",
+    formula_enable=True,
+    table_enable=True,
+    server_url=None,
+    return_md=True,
+    return_middle_json=True,
+    return_model_output=True,
+    return_content_list=True,
+    return_images=False,
+    start_page_id=0,
+    end_page_id=None,
+    config={}
     ) ->BaseResultModel:
 
     """
@@ -94,96 +78,166 @@ async def magic_pdf_parse_main(
     :param parse_method: 解析方法， 共 auto、ocr、txt 三种，默认 auto，如果效果不好，可以尝试 ocr
     :param is_save_local: 是否把输出的内容保存在本地
     :param local_output_path: 本地保存地址
+    :param p_lang_list: List of languages for each PDF, default is 'ch' (Chinese)
+    :param backend: The backend for parsing PDF, default is 'pipeline'。"pipeline", "vlm-transformers", "vlm-sglang-engine", "vlm-sglang-client"
+    :param formula_enable: Enable formula parsing
+    :param table_enable: Enable table parsing
+    :param server_url: Server URL for vlm-sglang-client backend
+    :param return_md: Whether to dump markdown files
+    :param return_middle_json: Whether to dump middle JSON files
+    :param return_model_output: Whether to dump model output files
+    :param return_content_list: Whether to dump content list files
+    :param return_images: 是否返回base64图片
+    :param start_page_id: Start page ID for parsing, default is 0
+    :param end_page_id: End page ID for parsing, default is None (parse all pages until the end of the document)
+    :param config: 启动配置
     """
-    
+
     result=BaseResultModel()
-    
+
     try:
+        # 创建唯一的输出目录
         if not os.path.exists("temp_files"):
             os.makedirs("temp_files")
-            
-        pdf_name = file.filename
-
-        name_without_suff = pdf_name.split(".")[0]
-
-        new_pdf_name = str(uuid.uuid4())
-    
         if not local_output_path:
             local_output_path="temp_files"
 
-        output_path = os.path.join("temp_files", new_pdf_name)
-        output_image_path = os.path.join(output_path, 'images')
-    
-        # 获取图片的父路径，为的是以相对路径保存到 .md 和 conent_list.json 文件中
-        image_path_parent = os.path.basename(output_image_path)
-    
-        pdf_bytes = await file.read()  # 读取 pdf 文件的二进制数据
-    
-        model_json = []
-    
-        # 执行解析步骤
-        image_writer, md_writer = FileBasedDataWriter(output_image_path), FileBasedDataWriter(local_output_path)
-    
-        '''
-        # 选择解析方式
-        if parse_method == "auto":
-            jso_useful_key = {"_pdf_type": "", "model_list": model_json}
-            pipe = UNIPipe(pdf_bytes, jso_useful_key, image_writer)
-        elif parse_method == "txt":
-            pipe = TXTPipe(pdf_bytes, model_json, image_writer)
-        elif parse_method == "ocr":
-            pipe = OCRPipe(pdf_bytes, model_json, image_writer)
-        else:
-            raise Exception("unknown parse method, only auto, ocr, txt allowed")
-        '''
-    
-        ds = PymuDocDataset(pdf_bytes)
-        # Choose parsing method
-        if parse_method == 'auto':
-            if ds.classify() == SupportedPdfParseMethod.OCR:
-                parse_method = 'ocr'
-            else:
-                parse_method = 'txt'
+        unique_dir = os.path.join(local_output_path, str(uuid.uuid4()))
+        os.makedirs(unique_dir, exist_ok=True)
 
-        if parse_method not in ['txt', 'ocr']:
-            logger.error('Unknown parse method, only auto, ocr, txt allowed')
-            return JSONResponse(
-                content={'error': 'Invalid parse method'}, status_code=400
-            )
+        # 处理上传的PDF文件
+        pdf_file_names = []
+        pdf_bytes_list = []
 
-        if len(model_json) == 0:
-            if parse_method == 'ocr':
-                infer_result = ds.apply(doc_analyze, ocr=True)
-            else:
-                infer_result = ds.apply(doc_analyze, ocr=False)
+        content = await file.read()
+        file_path = Path(file.filename)
 
-        else:
-            infer_result = InferenceResult(model_json, ds)
+        # 如果是图像文件或PDF，使用read_fn处理
+        if file_path.suffix.lower() in pdf_suffixes + image_suffixes:
+            # 创建临时文件以便使用read_fn
+            temp_path = Path(unique_dir) / file_path.name
+            with open(temp_path, "wb") as f:
+                f.write(content)
 
-        if len(model_json) == 0 and not model_config.__use_inside_model__:
-                logger.error('Need model list input')
-                return JSONResponse(
-                    content={'error': 'Model list input required'}, status_code=400
-                )
-        if parse_method == 'ocr':
-            pipe_res = infer_result.pipe_ocr_mode(image_writer)
-        else:
-            pipe_res = infer_result.pipe_txt_mode(image_writer)
-    
-        # 保存 text 和 md 格式的结果
-        content_list = pipe_res.get_content_list(image_path_parent, drop_mode="none")
+            try:
+                pdf_bytes = read_fn(temp_path)
+                pdf_bytes_list.append(pdf_bytes)
+                pdf_file_names.append(file_path.stem)
+                os.remove(temp_path)  # 删除临时文件
+            except Exception as e:
+                logger.exception(f"Failed to load file: {str(e)}")
         
-        md_content = pipe_res.get_markdown(image_path_parent, drop_mode="none")
+                result.code=500
+                result.msg="处理异常"
+                return result
+        else:
+            logger.exception(f"Unsupported file type: {file_path.suffix}")
+        
+            result.code=500
+            result.msg="处理异常"
+            return result
 
-        #pipe_res.draw_layout(os.path.join(local_output_path, f"{new_pdf_name}_layout.pdf"))
+        # 设置语言列表，确保与文件数量一致
+        actual_lang_list = lang_list
+        if len(actual_lang_list) != len(pdf_file_names):
+            # 如果语言列表长度不匹配，使用第一个语言或默认"ch"
+            actual_lang_list = [actual_lang_list[0] if actual_lang_list else "ch"] * len(pdf_file_names)
 
-        #pipe_res.dump_md(md_writer, f"{new_pdf_name}.md", str(os.path.basename(local_output_path)))
+        # 调用异步处理函数
+        await aio_do_parse(
+            output_dir=unique_dir,
+            pdf_file_names=pdf_file_names,
+            pdf_bytes_list=pdf_bytes_list,
+            p_lang_list=actual_lang_list,
+            backend=backend,
+            parse_method=parse_method,
+            formula_enable=formula_enable,
+            table_enable=table_enable,
+            server_url=server_url,
+            f_draw_layout_bbox=True,
+            f_draw_span_bbox=True,
+            f_dump_md=return_md,
+            f_dump_middle_json=return_middle_json,
+            f_dump_model_output=return_model_output,
+            f_dump_orig_pdf=True,
+            f_dump_content_list=return_content_list,
+            start_page_id=start_page_id,
+            end_page_id=end_page_id,
+            **config
+        )
+
+        # 构建结果路径
+        result_dict = {}
+        for pdf_name in pdf_file_names:
+            result_dict[pdf_name] = {}
+            data = result_dict[pdf_name]
+
+            if backend.startswith("pipeline"):
+                parse_dir = os.path.join(unique_dir, pdf_name, parse_method)
+            else:
+                parse_dir = os.path.join(unique_dir, pdf_name, "vlm")
+
+            if os.path.exists(parse_dir):
+                if return_md:
+                    data["md_content"] = get_infer_result(".md", pdf_name, parse_dir)
+                if return_middle_json:
+                    data["middle_json"] = get_infer_result("_middle.json", pdf_name, parse_dir)
+                if return_model_output:
+                    if backend.startswith("pipeline"):
+                        data["model_output"] = get_infer_result("_model.json", pdf_name, parse_dir)
+                    else:
+                        data["model_output"] = get_infer_result("_model_output.txt", pdf_name, parse_dir)
+                if return_content_list:
+                    data["content_list"] = get_infer_result("_content_list.json", pdf_name, parse_dir)
+                if return_images:
+                    image_paths = glob(f"{parse_dir}/images/*.jpg")
+                    data["images"] = {
+                        os.path.basename(
+                            image_path
+                        ): f"data:image/jpeg;base64,{encode_image(image_path)}"
+                        for image_path in image_paths
+                    }
+
+                # 是否要删除处理文件
+                if is_save_local==False:
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}.md")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
+
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_middle.json")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
+
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_model.json")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
+
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}.pdf")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
+
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_model_output.txt")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
+
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_content_list.json")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
+
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_layout.pdf")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
+
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_origin.pdf")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
     
-        result.data=await read_md_dump(pipe_res, output_image_path, new_pdf_name, content_list, md_content, file.filename, is_save_local, local_output_path)
-    
-        # 清除文件夹
-        # shutil.rmtree(output_path)
-    
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_span.pdf")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
+
+        result.data=await read_md_dump(f"{parse_dir}/images", data["content_list"])
+
         return result
     
     except Exception as e:
@@ -195,8 +249,21 @@ async def magic_pdf_parse_main(
 
 async def magic_pdf_parse_main2(file:UploadFile,
     parse_method: str="auto",
-    is_save_local: bool=True,
+    is_save_local: bool=False,
     local_output_path: str=None,
+    lang_list: list[str] = ["ch"],
+    backend="vlm-sglang-engine",
+    formula_enable=True,
+    table_enable=True,
+    server_url=None,
+    return_md=True,
+    return_middle_json=True,
+    return_model_output=True,
+    return_content_list=True,
+    return_images=False,
+    start_page_id=0,
+    end_page_id=99999,
+    config={}
     ) ->BaseResultModel:
 
     """
@@ -205,6 +272,19 @@ async def magic_pdf_parse_main2(file:UploadFile,
     :param parse_method: 解析方法， 共 auto、ocr、txt 三种，默认 auto，如果效果不好，可以尝试 ocr
     :param is_save_local: 是否把输出的内容保存在本地
     :param local_output_path: 本地保存地址
+    :param p_lang_list: List of languages for each PDF, default is 'ch' (Chinese)
+    :param backend: The backend for parsing PDF, default is 'pipeline'。"pipeline", "vlm-transformers", "vlm-sglang-engine", "vlm-sglang-client"
+    :param formula_enable: Enable formula parsing
+    :param table_enable: Enable table parsing
+    :param server_url: Server URL for vlm-sglang-client backend
+    :param return_md: Whether to dump markdown files
+    :param return_middle_json: Whether to dump middle JSON files
+    :param return_model_output: Whether to dump model output files
+    :param return_content_list: Whether to dump content list files
+    :param return_images: 是否返回base64图片
+    :param start_page_id: Start page ID for parsing, default is 0
+    :param end_page_id: End page ID for parsing, default is None (parse all pages until the end of the document)
+    :param config: 启动配置
     """
 
     result=BaseResultModel()
@@ -235,57 +315,110 @@ async def magic_pdf_parse_main2(file:UploadFile,
         with open(copy_file_path, "wb") as f:
             f.write(pdf_bytes)
 
+        # 处理上传的PDF文件
+        pdf_file_names = []
+        pdf_bytes_list = []
 
-        # 执行解析步骤
-        image_writer, md_writer = FileBasedDataWriter(output_image_path), FileBasedDataWriter(local_output_path)
+        content = await file.read()
+        file_path = Path(file.filename)
 
-        '''
-        # 选择解析方式
-        if parse_method == "auto":
-            jso_useful_key = {"_pdf_type": "", "model_list": model_json}
-            pipe = UNIPipe(pdf_bytes, jso_useful_key, image_writer)
-        elif parse_method == "txt":
-            pipe = TXTPipe(pdf_bytes, model_json, image_writer)
-        elif parse_method == "ocr":
-            pipe = OCRPipe(pdf_bytes, model_json, image_writer)
-        else:
-            raise Exception("unknown parse method, only auto, ocr, txt allowed")
-        '''
+        pdf_bytes_list.append(pdf_bytes)
+        pdf_file_names.append(Path(copy_file_path).stem)
 
-        ds = PymuDocDataset(pdf_bytes)
-        # Choose parsing method
-        if parse_method == 'auto':
-            if ds.classify() == SupportedPdfParseMethod.OCR:
-                parse_method = 'ocr'
+        # 设置语言列表，确保与文件数量一致
+        actual_lang_list = lang_list
+        if len(actual_lang_list) != len(pdf_file_names):
+            # 如果语言列表长度不匹配，使用第一个语言或默认"ch"
+            actual_lang_list = [actual_lang_list[0] if actual_lang_list else "ch"] * len(pdf_file_names)
+
+        # 调用异步处理函数
+        await aio_do_parse(
+            output_dir=output_path,
+            pdf_file_names=pdf_file_names,
+            pdf_bytes_list=pdf_bytes_list,
+            p_lang_list=actual_lang_list,
+            backend=backend,
+            parse_method=parse_method,
+            formula_enable=formula_enable,
+            table_enable=table_enable,
+            server_url=server_url,
+            f_draw_layout_bbox=True,
+            f_draw_span_bbox=True,
+            f_dump_md=return_md,
+            f_dump_middle_json=return_middle_json,
+            f_dump_model_output=return_model_output,
+            f_dump_orig_pdf=True,
+            f_dump_content_list=return_content_list,
+            start_page_id=start_page_id,
+            end_page_id=end_page_id,
+            **config
+        )
+
+        # 构建结果路径
+        for pdf_name in pdf_file_names:
+            if backend.startswith("pipeline"):
+                parse_dir = os.path.join(output_path, pdf_name, parse_method)
             else:
-                parse_method = 'txt'
+                parse_dir = os.path.join(output_path, pdf_name, "vlm")
 
-        if parse_method not in ['txt', 'ocr']:
-            logger.error('Unknown parse method, only auto, ocr, txt allowed')
-            return JSONResponse(
-                content={'error': 'Invalid parse method'}, status_code=400
-            )
+            if os.path.exists(parse_dir):
+                # 是否要删除处理文件
+                if is_save_local==False:
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}.md")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
 
-        if parse_method == 'ocr':
-            infer_result = ds.apply(doc_analyze, ocr=True)        
-            pipe_res = infer_result.pipe_ocr_mode(image_writer)
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_middle.json")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
 
-        else:
-            infer_result = ds.apply(doc_analyze, ocr=False)
-            pipe_res = infer_result.pipe_txt_mode(image_writer)
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_model.json")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
 
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}.pdf")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
 
-        # 保存 text 和 md 格式的结果
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_model_output.txt")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
 
-        ### draw layout result on each page
-        pipe_res.draw_layout(os.path.join(output_path, f"{name_without_suff}_layout.pdf"))
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_content_list.json")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
 
-        pipe_res.dump_md(md_writer, os.path.join(name_without_suff,f"{name_without_suff}.md"), name_without_suff)
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_layout.pdf")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
 
-        ### dump content list
-        pipe_res.dump_content_list(md_writer, os.path.join(name_without_suff,f"{name_without_suff}_content_list.json"), name_without_suff)
-        
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_origin.pdf")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
+    
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_span.pdf")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
 
+                # 复制 parse_dir 中的所有内容到 output_path
+                for item in os.listdir(parse_dir):
+                    src = os.path.join(parse_dir, item)
+                    dst = os.path.join(output_path, item)
+                    
+                    # 如果目标文件已存在，可以选择覆盖或跳过（这里选择覆盖）
+                    if os.path.exists(dst):
+                        if os.path.isdir(dst):
+                            shutil.rmtree(dst)  # 删除目标文件夹（如果是目录）
+                        else:
+                            os.remove(dst)  # 删除目标文件（如果是文件）
+                    
+                    if os.path.isdir(src):
+                        shutil.copytree(src, dst)  # 递归复制目录
+                    else:
+                        shutil.copy2(src, dst)  # 复制文件并保留元数据
+                
+                # 级联删除 parse_dir
+                shutil.rmtree(parse_dir)
 
         return result
     
@@ -305,7 +438,8 @@ async def upload(file:UploadFile):
 
 async def magic_pdf_parse_main_batch(
     folder_path:str="",
-    parse_method: str="auto"
+    parse_method: str="auto",
+    lang_list: list[str] = ["ch"]
     ) ->BaseResultModel:
     result=BaseResultModel()
 
@@ -350,7 +484,7 @@ async def magic_pdf_parse_main_batch(
     index=1
     for upload_file in upload_files:
         print(f"批处理:正在处理文件 {upload_file.filename} {index}/{total}")
-        magic_pdf_parse_main_result = await magic_pdf_parse_main2(upload_file, parse_method, True, folder_path)
+        magic_pdf_parse_main_result = await magic_pdf_parse_main2(upload_file, parse_method, True, folder_path, lang_list=lang_list)
         if magic_pdf_parse_main_result.code != 200:
             error_file.append(upload_file.filename)
             print(f"批处理:异常处理文件 {upload_file.filename} {index}/{total}")

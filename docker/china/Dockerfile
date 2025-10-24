@@ -1,54 +1,30 @@
-# Use the official Ubuntu base image
-FROM ubuntu:22.04
+# Use DaoCloud mirrored sglang image for China region
+FROM docker.m.daocloud.io/lmsysorg/sglang:v0.4.10.post2-cu126
+# For blackwell GPU, use the following line instead:
+# FROM docker.m.daocloud.io/lmsysorg/sglang:v0.4.10.post2-cu128-b200
 
-# Set environment variables to non-interactive to avoid prompts during installation
-ENV DEBIAN_FRONTEND=noninteractive
+# Use the official sglang image
+# FROM lmsysorg/sglang:v0.4.10.post2-cu126
+# For blackwell GPU, use the following line instead:
+# FROM lmsysorg/sglang:v0.4.10.post2-cu128-b200
 
-# Update the package list and install necessary packages
+# Install libgl for opencv support & Noto fonts for Chinese characters
 RUN apt-get update && \
     apt-get install -y \
-        software-properties-common && \
-    add-apt-repository ppa:deadsnakes/ppa && \
-    apt-get update && \
-    apt-get install -y \
-        python3.10 \
-        python3.10-venv \
-        python3.10-distutils \
-        python3-pip \
-        wget \
-        git \
-        libgl1 \
-        libreoffice \
+        fonts-noto-core \
         fonts-noto-cjk \
-        fonts-wqy-zenhei \
-        fonts-wqy-microhei \
-        ttf-mscorefonts-installer \
         fontconfig \
-        libglib2.0-0 \
-        libxrender1 \
-        libsm6 \
-        libxext6 \
-        poppler-utils \
-        && rm -rf /var/lib/apt/lists/*
+        libgl1 && \
+    fc-cache -fv && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-# Set Python 3.10 as the default python3
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
-
-# Create a virtual environment for MinerU
-RUN python3 -m venv /opt/mineru_venv
-
-# Copy the configuration file template and install magic-pdf latest
-RUN /bin/bash -c "wget https://gcore.jsdelivr.net/gh/opendatalab/MinerU@master/magic-pdf.template.json && \
-    cp magic-pdf.template.json /root/magic-pdf.json && \
-    source /opt/mineru_venv/bin/activate && \
-    pip3 install --upgrade pip -i https://mirrors.aliyun.com/pypi/simple && \
-    pip3 install -U magic-pdf[full] -i https://mirrors.aliyun.com/pypi/simple"
+# Install mineru latest
+RUN python3 -m pip install -U 'mineru[core]' -i https://mirrors.aliyun.com/pypi/simple --break-system-packages && \
+    python3 -m pip cache purge
 
 # Download models and update the configuration file
-RUN /bin/bash -c "pip3 install modelscope && \
-    wget https://gcore.jsdelivr.net/gh/opendatalab/MinerU@master/scripts/download_models.py -O download_models.py && \
-    python3 download_models.py && \
-    sed -i 's|cpu|cuda|g' /root/magic-pdf.json"
+RUN /bin/bash -c "mineru-models-download -s modelscope -m all"
 
 # Set the entry point to activate the virtual environment and run the command line tool
-ENTRYPOINT ["/bin/bash", "-c", "source /opt/mineru_venv/bin/activate && exec \"$@\"", "--"]
+ENTRYPOINT ["/bin/bash", "-c", "export MINERU_MODEL_SOURCE=local && exec \"$@\"", "--"]

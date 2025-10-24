@@ -10,16 +10,16 @@
 [![forks](https://img.shields.io/github/forks/opendatalab/MinerU.svg)](https://github.com/opendatalab/MinerU)
 [![open issues](https://img.shields.io/github/issues-raw/opendatalab/MinerU)](https://github.com/opendatalab/MinerU/issues)
 [![issue resolution](https://img.shields.io/github/issues-closed-raw/opendatalab/MinerU)](https://github.com/opendatalab/MinerU/issues)
-[![PyPI version](https://img.shields.io/pypi/v/magic-pdf)](https://pypi.org/project/magic-pdf/)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/magic-pdf)](https://pypi.org/project/magic-pdf/)
-[![Downloads](https://static.pepy.tech/badge/magic-pdf)](https://pepy.tech/project/magic-pdf)
-[![Downloads](https://static.pepy.tech/badge/magic-pdf/month)](https://pepy.tech/project/magic-pdf)
-
-[![OpenDataLab](https://img.shields.io/badge/Demo_on_OpenDataLab-blue?logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM0IiBoZWlnaHQ9IjEzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMTIyLDljMCw1LTQsOS05LDlzLTktNC05LTksNC05LDktOSw5LDQsOSw5eiIgZmlsbD0idXJsKCNhKSIvPjxwYXRoIGQ9Im0xMjIsOWMwLDUtNCw5LTksOXMtOS00LTktOSw0LTksOS05LDksNCw5LDl6IiBmaWxsPSIjMDEwMTAxIi8+PHBhdGggZD0ibTkxLDE4YzAsNS00LDktOSw5cy05LTQtOS05LDQtOSw5LTksOSw0LDksOXoiIGZpbGw9InVybCgjYikiLz48cGF0aCBkPSJtOTEsMThjMCw1LTQsOS05LDlzLTktNC05LTksNC05LDktOSw5LDQsOSw5eiIgZmlsbD0iIzAxMDEwMSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMzksNjJjMCwxNiw4LDMwLDIwLDM4LDctNiwxMi0xNiwxMi0yNlY0OWMwLTQsMy03LDYtOGw0Ni0xMmM1LTEsMTEsMywxMSw4djMxYzAsMzctMzAsNjYtNjYsNjYtMzcsMC02Ni0zMC02Ni02NlY0NmMwLTQsMy03LDYtOGwyMC02YzUtMSwxMSwzLDExLDh2MjF6bS0yOSw2YzAsMTYsNiwzMCwxNyw0MCwzLDEsNSwxLDgsMSw1LDAsMTAtMSwxNS0zQzM3LDk1LDI5LDc5LDI5LDYyVjQybC0xOSw1djIweiIgZmlsbD0idXJsKCNjKSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMzksNjJjMCwxNiw4LDMwLDIwLDM4LDctNiwxMi0xNiwxMi0yNlY0OWMwLTQsMy03LDYtOGw0Ni0xMmM1LTEsMTEsMywxMSw4djMxYzAsMzctMzAsNjYtNjYsNjYtMzcsMC02Ni0zMC02Ni02NlY0NmMwLTQsMy03LDYtOGwyMC02YzUtMSwxMSwzLDExLDh2MjF6bS0yOSw2YzAsMTYsNiwzMCwxNyw0MCwzLDEsNSwxLDgsMSw1LDAsMTAtMSwxNS0zQzM3LDk1LDI5LDc5LDI5LDYyVjQybC0xOSw1djIweiIgZmlsbD0iIzAxMDEwMSIvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYyIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48L3N2Zz4=&labelColor=white)](https://mineru.net/OpenSourceTools/Extractor?source=github)
+[![PyPI version](https://img.shields.io/pypi/v/mineru)](https://pypi.org/project/mineru/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mineru)](https://pypi.org/project/mineru/)
+[![Downloads](https://static.pepy.tech/badge/mineru)](https://pepy.tech/project/mineru)
+[![Downloads](https://static.pepy.tech/badge/mineru/month)](https://pepy.tech/project/mineru)
+[![OpenDataLab](https://img.shields.io/badge/webapp_on_mineru.net-blue?logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM0IiBoZWlnaHQ9IjEzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMTIyLDljMCw1LTQsOS05LDlzLTktNC05LTksNC05LDktOSw5LDQsOSw5eiIgZmlsbD0idXJsKCNhKSIvPjxwYXRoIGQ9Im0xMjIsOWMwLDUtNCw5LTksOXMtOS00LTktOSw0LTksOS05LDksNCw5LDl6IiBmaWxsPSIjMDEwMTAxIi8+PHBhdGggZD0ibTkxLDE4YzAsNS00LDktOSw5cy05LTQtOS05LDQtOSw5LTksOSw0LDksOXoiIGZpbGw9InVybCgjYikiLz48cGF0aCBkPSJtOTEsMThjMCw1LTQsOS05LDlzLTktNC05LTksNC05LDktOSw5LDQsOSw5eiIgZmlsbD0iIzAxMDEwMSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMzksNjJjMCwxNiw4LDMwLDIwLDM4LDctNiwxMi0xNiwxMi0yNlY0OWMwLTQsMy03LDYtOGw0Ni0xMmM1LTEsMTEsMywxMSw4djMxYzAsMzctMzAsNjYtNjYsNjYtMzcsMC02Ni0zMC02Ni02NlY0NmMwLTQsMy03LDYtOGwyMC02YzUtMSwxMSwzLDExLDh2MjF6bS0yOSw2YzAsMTYsNiwzMCwxNyw0MCwzLDEsNSwxLDgsMSw1LDAsMTAtMSwxNS0zQzM3LDk1LDI5LDc5LDI5LDYyVjQybC0xOSw1djIweiIgZmlsbD0idXJsKCNjKSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMzksNjJjMCwxNiw4LDMwLDIwLDM4LDctNiwxMi0xNiwxMi0yNlY0OWMwLTQsMy03LDYtOGw0Ni0xMmM1LTEsMTEsMywxMSw4djMxYzAsMzctMzAsNjYtNjYsNjYtMzcsMC02Ni0zMC02Ni02NlY0NmMwLTQsMy03LDYtOGwyMC02YzUtMSwxMSwzLDExLDh2MjF6bS0yOSw2YzAsMTYsNiwzMCwxNyw0MCwzLDEsNSwxLDgsMSw1LDAsMTAtMSwxNS0zQzM3LDk1LDI5LDc5LDI5LDYyVjQybC0xOSw1djIweiIgZmlsbD0iIzAxMDEwMSIvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYyIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48L3N2Zz4=&labelColor=white)](https://mineru.net/OpenSourceTools/Extractor?source=github)
 [![HuggingFace](https://img.shields.io/badge/Demo_on_HuggingFace-yellow.svg?logo=data:image/png;base64,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&labelColor=white)](https://huggingface.co/spaces/opendatalab/MinerU)
 [![ModelScope](https://img.shields.io/badge/Demo_on_ModelScope-purple?logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggaWQ9InN2Z18xNCIgZmlsbD0iIzYyNGFmZiIgZD0ibTAsODkuODRsMjUuNjUsMGwwLDI1LjY0OTk5bC0yNS42NSwwbDAsLTI1LjY0OTk5eiIvPgogIDxwYXRoIGlkPSJzdmdfMTUiIGZpbGw9IiM2MjRhZmYiIGQ9Im05OS4xNCwxMTUuNDlsMjUuNjUsMGwwLDI1LjY1bC0yNS42NSwwbDAsLTI1LjY1eiIvPgogIDxwYXRoIGlkPSJzdmdfMTYiIGZpbGw9IiM2MjRhZmYiIGQ9Im0xNzYuMDksMTQxLjE0bC0yNS42NDk5OSwwbDAsMjIuMTlsNDcuODQsMGwwLC00Ny44NGwtMjIuMTksMGwwLDI1LjY1eiIvPgogIDxwYXRoIGlkPSJzdmdfMTciIGZpbGw9IiMzNmNmZDEiIGQ9Im0xMjQuNzksODkuODRsMjUuNjUsMGwwLDI1LjY0OTk5bC0yNS42NSwwbDAsLTI1LjY0OTk5eiIvPgogIDxwYXRoIGlkPSJzdmdfMTgiIGZpbGw9IiMzNmNmZDEiIGQ9Im0wLDY0LjE5bDI1LjY1LDBsMCwyNS42NWwtMjUuNjUsMGwwLC0yNS42NXoiLz4KICA8cGF0aCBpZD0ic3ZnXzE5IiBmaWxsPSIjNjI0YWZmIiBkPSJtMTk4LjI4LDg5Ljg0bDI1LjY0OTk5LDBsMCwyNS42NDk5OWwtMjUuNjQ5OTksMGwwLC0yNS42NDk5OXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIwIiBmaWxsPSIjMzZjZmQxIiBkPSJtMTk4LjI4LDY0LjE5bDI1LjY0OTk5LDBsMCwyNS42NWwtMjUuNjQ5OTksMGwwLC0yNS42NXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIxIiBmaWxsPSIjNjI0YWZmIiBkPSJtMTUwLjQ0LDQybDAsMjIuMTlsMjUuNjQ5OTksMGwwLDI1LjY1bDIyLjE5LDBsMCwtNDcuODRsLTQ3Ljg0LDB6Ii8+CiAgPHBhdGggaWQ9InN2Z18yMiIgZmlsbD0iIzM2Y2ZkMSIgZD0ibTczLjQ5LDg5Ljg0bDI1LjY1LDBsMCwyNS42NDk5OWwtMjUuNjUsMGwwLC0yNS42NDk5OXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIzIiBmaWxsPSIjNjI0YWZmIiBkPSJtNDcuODQsNjQuMTlsMjUuNjUsMGwwLC0yMi4xOWwtNDcuODQsMGwwLDQ3Ljg0bDIyLjE5LDBsMCwtMjUuNjV6Ii8+CiAgPHBhdGggaWQ9InN2Z18yNCIgZmlsbD0iIzYyNGFmZiIgZD0ibTQ3Ljg0LDExNS40OWwtMjIuMTksMGwwLDQ3Ljg0bDQ3Ljg0LDBsMCwtMjIuMTlsLTI1LjY1LDBsMCwtMjUuNjV6Ii8+CiA8L2c+Cjwvc3ZnPg==&labelColor=white)](https://www.modelscope.cn/studios/OpenDataLab/MinerU)
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/myhloli/3b3a00a4a0a61577b6c30f989092d20d/mineru_demo.ipynb)
-[![Paper](https://img.shields.io/badge/Paper-arXiv-green)](https://arxiv.org/abs/2409.18839)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/myhloli/a3cb16570ab3cfeadf9d8f0ac91b4fca/mineru_demo.ipynb)
+[![arXiv](https://img.shields.io/badge/arXiv-2409.18839-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2409.18839)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/opendatalab/MinerU)
 
 
 <a href="https://trendshift.io/repositories/11174" target="_blank"><img src="https://trendshift.io/api/badge/repositories/11174" alt="opendatalab%2FMinerU | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
@@ -31,241 +31,472 @@
 <!-- hot link -->
 
 <p align="center">
-<a href="https://github.com/opendatalab/PDF-Extract-Kit">PDF-Extract-Kit: High-Quality PDF Extraction Toolkit</a>🔥🔥🔥
-<br>
-<br>
-<a href="https://mineru.net/client?source=github">
-Easier to use: Just grab MinerU Desktop. No coding, no login, just a simple interface and smooth interactions. Enjoy it without any fuss!</a>🚀🚀🚀
-
+🚀<a href="https://mineru.net/?source=github">Access MinerU Now→✅ Zero-Install Web Version ✅ Full-Featured Desktop Client ✅ Instant API Access; Skip deployment headaches – get all product formats in one click. Developers, dive in!</a>
 </p>
 
 <!-- join us -->
 
 <p align="center">
-    👋 join us on <a href="https://discord.gg/Tdedn9GTXq" target="_blank">Discord</a> and <a href="http://mineru.space/s/V85Yl" target="_blank">WeChat</a>
+    👋 join us on <a href="https://discord.gg/Tdedn9GTXq" target="_blank">Discord</a> and <a href="https://mineru.net/community-portal/?aliasId=3c430f94" target="_blank">WeChat</a>
 </p>
 
 </div>
 
 # Changelog
-- 2025/04/16 1.3.4 Released
-  - Slightly improved the speed of OCR detection by removing some unused blocks.
-  - Fixed page-level sorting errors caused by footnotes in certain cases.
-- 2025/04/12 1.3.2 released
-  - Fixed the issue of incompatible dependency package versions when installing in Python 3.13 environment on Windows systems.
-  - Optimized memory usage during batch inference.
-  - Improved the parsing effect of tables rotated by 90 degrees.
-  - Enhanced the parsing accuracy for large tables in financial report samples.
-  - Fixed the occasional word concatenation issue in English text areas when OCR language is not specified.(The model needs to be updated)
-- 2025/04/08 1.3.1 released, fixed some compatibility issues
-  - Supported Python 3.13
-  - Made the final adaptation for some outdated Linux systems (e.g., CentOS 7), and no further support will be guaranteed for subsequent versions. [Installation Instructions](https://github.com/opendatalab/MinerU/issues/1004)
-- 2025/04/03 1.3.0 released, in this version we made many optimizations and improvements:
-  - Installation and compatibility optimization
-    - By removing the use of `layoutlmv3` in layout, resolved compatibility issues caused by `detectron2`.
-    - Torch version compatibility extended to 2.2~2.6 (excluding 2.5).
-    - CUDA compatibility supports 11.8/12.4/12.6/12.8 (CUDA version determined by torch), resolving compatibility issues for some users with 50-series and H-series GPUs.
-    - Python compatible versions expanded to 3.10~3.12, solving the problem of automatic downgrade to 0.6.1 during installation in non-3.10 environments.
-    - Offline deployment process optimized; no internet connection required after successful deployment to download any model files.
-  - Performance optimization
-    - By supporting batch processing of multiple PDF files ([script example](demo/batch_demo.py)), improved parsing speed for small files in batches (compared to version 1.0.1, formula parsing speed increased by over 1400%, overall parsing speed increased by over 500%).
-    - Optimized loading and usage of the mfr model, reducing GPU memory usage and improving parsing speed (requires re-execution of the [model download process](docs/how_to_download_models_en.md) to obtain incremental updates of model files).
-    - Optimized GPU memory usage, requiring only a minimum of 6GB to run this project.
-    - Improved running speed on MPS devices.
-  - Parsing effect optimization
-    - Updated the mfr model to `unimernet(2503)`, solving the issue of lost line breaks in multi-line formulas.
-  - Usability Optimization
-    - By using `paddleocr2torch`, completely replaced the use of the `paddle` framework and `paddleocr` in the project, resolving conflicts between `paddle` and `torch`, as well as thread safety issues caused by the `paddle` framework.
-    - Added a real-time progress bar during the parsing process to accurately track progress, making the wait less painful.
-<details>
-<summary>2025/03/03 1.2.1 released</summary>
-<ul>
-  <li>Fixed the impact on punctuation marks during full-width to half-width conversion of letters and numbers</li>
-  <li>Fixed caption matching inaccuracies in certain scenarios</li>
-  <li>Fixed formula span loss issues in certain scenarios</li>
-</ul>
-</details>
+
+- 2025/09/10 2.2.2 Released
+  - Fixed the issue where the new table recognition model would affect the overall parsing task when some table parsing failed
+
+- 2025/09/08 2.2.1 Released  
+  - Fixed the issue where some newly added models were not downloaded when using the model download command.
+
+- 2025/09/05 2.2.0 Released
+  - Major Updates
+    - In this version, we focused on improving table parsing accuracy by introducing a new [wired table recognition model](https://github.com/RapidAI/TableStructureRec) and a brand-new hybrid table structure parsing algorithm, significantly enhancing the table recognition capabilities of the `pipeline` backend.
+    - We also added support for cross-page table merging, which is supported by both `pipeline` and `vlm` backends, further improving the completeness and accuracy of table parsing.
+  - Other Updates
+    - The `pipeline` backend now supports 270-degree rotated table parsing, bringing support for table parsing in 0/90/270-degree orientations
+    - `pipeline` added OCR capability support for Thai and Greek, and updated the English OCR model to the latest version. English recognition accuracy improved by 11%, Thai recognition model accuracy is 82.68%, and Greek recognition model accuracy is 89.28% (by PPOCRv5)
+    - Added `bbox` field (mapped to 0-1000 range) in the output `content_list.json`, making it convenient for users to directly obtain position information for each content block
+    - Removed the `pipeline_old_linux` installation option, no longer supporting legacy Linux systems such as `CentOS 7`, to provide better support for `uv`'s `sync`/`run` commands
 
 <details>
-<summary>2025/02/24 1.2.0 released</summary>
-<p>This version includes several fixes and improvements to enhance parsing efficiency and accuracy:</p>
-<ul>
-  <li><strong>Performance Optimization</strong>
+  <summary>History Log</summary>
+
+  <details>
+    <summary>2025/08/01 2.1.10 Released</summary>
     <ul>
-      <li>Increased classification speed for PDF documents in auto mode.</li>
+      <li>Fixed an issue in the <code>pipeline</code> backend where block overlap caused the parsing results to deviate from expectations #3232</li>
     </ul>
-  </li>
-  <li><strong>Parsing Optimization</strong>
+  </details>  
+
+  <details>
+    <summary>2025/07/30 2.1.9 Released</summary>
     <ul>
-      <li>Improved parsing logic for documents containing watermarks, significantly enhancing the parsing results for such documents.</li>
-      <li>Enhanced the matching logic for multiple images/tables and captions within a single page, improving the accuracy of image-text matching in complex layouts.</li>
+      <li><code>transformers</code> 4.54.1 version adaptation</li>
     </ul>
-  </li>
-  <li><strong>Bug Fixes</strong>
+  </details>  
+
+  <details>
+    <summary>2025/07/28 2.1.8 Released</summary>
     <ul>
-      <li>Fixed an issue where image/table spans were incorrectly filled into text blocks under certain conditions.</li>
-      <li>Resolved an issue where title blocks were empty in some cases.</li>
+      <li><code>sglang</code> 0.4.9.post5 version adaptation</li>
     </ul>
-  </li>
-</ul>
-</details>
+  </details>  
 
-<details>
-<summary>2025/01/22 1.1.0 released</summary>
-<p>In this version we have focused on improving parsing accuracy and efficiency:</p>
-<ul>
-  <li><strong>Model capability upgrade</strong> (requires re-executing the <a href="https://github.com/opendatalab/MinerU/blob/master/docs/how_to_download_models_en.md">model download process</a> to obtain incremental updates of model files)
+  <details>
+    <summary>2025/07/27 2.1.7 Released</summary>
     <ul>
-      <li>The layout recognition model has been upgraded to the latest <code>doclayout_yolo(2501)</code> model, improving layout recognition accuracy.</li>
-      <li>The formula parsing model has been upgraded to the latest <code>unimernet(2501)</code> model, improving formula recognition accuracy.</li>
+      <li><code>transformers</code> 4.54.0 version adaptation</li>
     </ul>
-  </li>
-  <li><strong>Performance optimization</strong>
+  </details>  
+
+  <details>
+    <summary>2025/07/26 2.1.6 Released</summary>
     <ul>
-      <li>On devices that meet certain configuration requirements (16GB+ VRAM), by optimizing resource usage and restructuring the processing pipeline, overall parsing speed has been increased by more than 50%.</li>
+      <li>Fixed table parsing issues in handwritten documents when using <code>vlm</code> backend</li>
+      <li>Fixed visualization box position drift issue when document is rotated #3175</li>
     </ul>
-  </li>
-  <li><strong>Parsing effect optimization</strong>
+  </details>  
+
+  <details>
+    <summary>2025/07/24 2.1.5 Released</summary>
     <ul>
-      <li>Added a new heading classification feature (testing version, enabled by default) to the online demo (<a href="https://mineru.net/OpenSourceTools/Extractor">mineru.net</a>/<a href="https://huggingface.co/spaces/opendatalab/MinerU">huggingface</a>/<a href="https://www.modelscope.cn/studios/OpenDataLab/MinerU">modelscope</a>), which supports hierarchical classification of headings, thereby enhancing document structuring.</li>
+      <li><code>sglang</code> 0.4.9 version adaptation, synchronously upgrading the dockerfile base image to sglang 0.4.9.post3</li>
     </ul>
-  </li>
-</ul>
-</details>
+  </details>  
 
-<details>
-<summary>2025/01/10 1.0.1 released</summary>
-<p>This is our first official release, where we have introduced a completely new API interface and enhanced compatibility through extensive refactoring, as well as a brand new automatic language identification feature:</p>
-<ul>
-  <li><strong>New API Interface</strong>
+  <details>
+    <summary>2025/07/23 2.1.4 Released</summary>
     <ul>
-      <li>For the data-side API, we have introduced the Dataset class, designed to provide a robust and flexible data processing framework. This framework currently supports a variety of document formats, including images (.jpg and .png), PDFs, Word documents (.doc and .docx), and PowerPoint presentations (.ppt and .pptx). It ensures effective support for data processing tasks ranging from simple to complex.</li>
-      <li>For the user-side API, we have meticulously designed the MinerU processing workflow as a series of composable Stages. Each Stage represents a specific processing step, allowing users to define new Stages according to their needs and creatively combine these stages to customize their data processing workflows.</li>
+      <li><strong>Bug Fixes</strong>
+        <ul>
+          <li>Fixed the issue of excessive memory consumption during the <code>MFR</code> step in the <code>pipeline</code> backend under certain scenarios #2771</li>
+          <li>Fixed the inaccurate matching between <code>image</code>/<code>table</code> and <code>caption</code>/<code>footnote</code> under certain conditions #3129</li>
+        </ul>
+      </li>
     </ul>
-  </li>
-  <li><strong>Enhanced Compatibility</strong>
+  </details>  
+
+  <details>
+    <summary>2025/07/16 2.1.1 Released</summary>
     <ul>
-      <li>By optimizing the dependency environment and configuration items, we ensure stable and efficient operation on ARM architecture Linux systems.</li>
-      <li>We have deeply integrated with Huawei Ascend NPU acceleration, providing autonomous and controllable high-performance computing capabilities. This supports the localization and development of AI application platforms in China. <a href="https://github.com/opendatalab/MinerU/blob/master/docs/README_Ascend_NPU_Acceleration_zh_CN.md">Ascend NPU Acceleration</a></li>
+      <li><strong>Bug fixes</strong>
+        <ul>
+          <li>Fixed text block content loss issue that could occur in certain <code>pipeline</code> scenarios #3005</li>
+          <li>Fixed issue where <code>sglang-client</code> required unnecessary packages like <code>torch</code> #2968</li>
+          <li>Updated <code>dockerfile</code> to fix incomplete text content parsing due to missing fonts in Linux #2915</li>
+        </ul>
+      </li>
+      <li><strong>Usability improvements</strong>
+        <ul>
+          <li>Updated <code>compose.yaml</code> to facilitate direct startup of <code>sglang-server</code>, <code>mineru-api</code>, and <code>mineru-gradio</code> services</li>
+          <li>Launched brand new <a href="https://opendatalab.github.io/MinerU/">online documentation site</a>, simplified readme, providing better documentation experience</li>
+        </ul>
+      </li>
     </ul>
-  </li>
-  <li><strong>Automatic Language Identification</strong>
+  </details>  
+
+  <details>
+    <summary>2025/07/05 2.1.0 Released</summary>
     <ul>
-      <li>By introducing a new language recognition model, setting the <code>lang</code> configuration to <code>auto</code> during document parsing will automatically select the appropriate OCR language model, improving the accuracy of scanned document parsing.</li>
+      <li>This is the first major update of MinerU 2, which includes a large number of new features and improvements, covering significant performance optimizations, user experience enhancements, and bug fixes. The detailed update contents are as follows:</li>
+      <li><strong>Performance Optimizations:</strong>
+        <ul>
+          <li>Significantly improved preprocessing speed for documents with specific resolutions (around 2000 pixels on the long side).</li>
+          <li>Greatly enhanced post-processing speed when the <code>pipeline</code> backend handles batch processing of documents with fewer pages (&lt;10 pages).</li>
+          <li>Layout analysis speed of the <code>pipeline</code> backend has been increased by approximately 20%.</li>
+        </ul>
+      </li>
+      <li><strong>Experience Enhancements:</strong>
+        <ul>
+          <li>Built-in ready-to-use <code>fastapi service</code> and <code>gradio webui</code>. For detailed usage instructions, please refer to <a href="https://opendatalab.github.io/MinerU/usage/quick_usage/#advanced-usage-via-api-webui-sglang-clientserver">Documentation</a>.</li>
+          <li>Adapted to <code>sglang</code> version <code>0.4.8</code>, significantly reducing the GPU memory requirements for the <code>vlm-sglang</code> backend. It can now run on graphics cards with as little as <code>8GB GPU memory</code> (Turing architecture or newer).</li>
+          <li>Added transparent parameter passing for all commands related to <code>sglang</code>, allowing the <code>sglang-engine</code> backend to receive all <code>sglang</code> parameters consistently with the <code>sglang-server</code>.</li>
+          <li>Supports feature extensions based on configuration files, including <code>custom formula delimiters</code>, <code>enabling heading classification</code>, and <code>customizing local model directories</code>. For detailed usage instructions, please refer to <a href="https://opendatalab.github.io/MinerU/usage/quick_usage/#extending-mineru-functionality-with-configuration-files">Documentation</a>.</li>
+        </ul>
+      </li>
+      <li><strong>New Features:</strong>
+        <ul>
+          <li>Updated the <code>pipeline</code> backend with the PP-OCRv5 multilingual text recognition model, supporting text recognition in 37 languages such as French, Spanish, Portuguese, Russian, and Korean, with an average accuracy improvement of over 30%. <a href="https://paddlepaddle.github.io/PaddleOCR/latest/en/version3.x/algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html">Details</a></li>
+          <li>Introduced limited support for vertical text layout in the <code>pipeline</code> backend.</li>
+        </ul>
+      </li>
     </ul>
-  </li>
-</ul>
-</details>
+  </details>
 
-<details>
-<summary>2024/11/22 0.10.0 released</summary>
-<p>Introducing hybrid OCR text extraction capabilities:</p>
-<ul>
-  <li>Significantly improved parsing performance in complex text distribution scenarios such as dense formulas, irregular span regions, and text represented by images.</li>
-  <li>Combines the dual advantages of accurate content extraction and faster speed in text mode, and more precise span/line region recognition in OCR mode.</li>
-</ul>
-</details>
-
-<details>
-<summary>2024/11/15 0.9.3 released</summary>
-<p>Integrated <a href="https://github.com/RapidAI/RapidTable">RapidTable</a> for table recognition, improving single-table parsing speed by more than 10 times, with higher accuracy and lower GPU memory usage.</p>
-</details>
-
-<details>
-<summary>2024/11/06 0.9.2 released</summary>
-<p>Integrated the <a href="https://huggingface.co/U4R/StructTable-InternVL2-1B">StructTable-InternVL2-1B</a> model for table recognition functionality.</p>
-</details>
-
-<details>
-<summary>2024/10/31 0.9.0 released</summary>
-<p>This is a major new version with extensive code refactoring, addressing numerous issues, improving performance, reducing hardware requirements, and enhancing usability:</p>
-<ul>
-  <li>Refactored the sorting module code to use <a href="https://github.com/ppaanngggg/layoutreader">layoutreader</a> for reading order sorting, ensuring high accuracy in various layouts.</li>
-  <li>Refactored the paragraph concatenation module to achieve good results in cross-column, cross-page, cross-figure, and cross-table scenarios.</li>
-  <li>Refactored the list and table of contents recognition functions, significantly improving the accuracy of list blocks and table of contents blocks, as well as the parsing of corresponding text paragraphs.</li>
-  <li>Refactored the matching logic for figures, tables, and descriptive text, greatly enhancing the accuracy of matching captions and footnotes to figures and tables, and reducing the loss rate of descriptive text to near zero.</li>
-  <li>Added multi-language support for OCR, supporting detection and recognition of 84 languages. For the list of supported languages, see <a href="https://paddlepaddle.github.io/PaddleOCR/latest/en/ppocr/blog/multi_languages.html#5-support-languages-and-abbreviations">OCR Language Support List</a>.</li>
-  <li>Added memory recycling logic and other memory optimization measures, significantly reducing memory usage. The memory requirement for enabling all acceleration features except table acceleration (layout/formula/OCR) has been reduced from 16GB to 8GB, and the memory requirement for enabling all acceleration features has been reduced from 24GB to 10GB.</li>
-  <li>Optimized configuration file feature switches, adding an independent formula detection switch to significantly improve speed and parsing results when formula detection is not needed.</li>
-  <li>Integrated <a href="https://github.com/opendatalab/PDF-Extract-Kit">PDF-Extract-Kit 1.0</a>:
+  <details>
+    <summary>2025/06/20 2.0.6 Released</summary>
     <ul>
-      <li>Added the self-developed <code>doclayout_yolo</code> model, which speeds up processing by more than 10 times compared to the original solution while maintaining similar parsing effects, and can be freely switched with <code>layoutlmv3</code> via the configuration file.</li>
-      <li>Upgraded formula parsing to <code>unimernet 0.2.1</code>, improving formula parsing accuracy while significantly reducing memory usage.</li>
-      <li>Due to the repository change for <code>PDF-Extract-Kit 1.0</code>, you need to re-download the model. Please refer to <a href="https://github.com/opendatalab/MinerU/blob/master/docs/how_to_download_models_en.md">How to Download Models</a> for detailed steps.</li>
+      <li>Fixed occasional parsing interruptions caused by invalid block content in <code>vlm</code> mode</li>
+      <li>Fixed parsing interruptions caused by incomplete table structures in <code>vlm</code> mode</li>
     </ul>
-  </li>
-</ul>
-</details>
-
-<details>
-<summary>2024/09/27 Version 0.8.1 released</summary>
-<p>Fixed some bugs, and providing a <a href="https://github.com/opendatalab/MinerU/blob/master/projects/web_demo/README.md">localized deployment version</a> of the <a href="https://opendatalab.com/OpenSourceTools/Extractor/PDF/">online demo</a> and the <a href="https://github.com/opendatalab/MinerU/blob/master/projects/web/README.md">front-end interface</a>.</p>
-</details>
-
-<details>
-<summary>2024/09/09 Version 0.8.0 released</summary>
-<p>Supporting fast deployment with Dockerfile, and launching demos on Huggingface and Modelscope.</p>
-</details>
-
-<details>
-<summary>2024/08/30 Version 0.7.1 released</summary>
-<p>Add paddle tablemaster table recognition option</p>
-</details>
-
-<details>
-<summary>2024/08/09 Version 0.7.0b1 released</summary>
-<p>Simplified installation process, added table recognition functionality</p>
-</details>
-
-<details>
-<summary>2024/08/01 Version 0.6.2b1 released</summary>
-<p>Optimized dependency conflict issues and installation documentation</p>
-</details>
-
-<details>
-<summary>2024/07/05 Initial open-source release</summary>
-</details>
-
-<!-- TABLE OF CONTENT -->
-
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#mineru">MinerU</a>
+  </details>
+  
+  <details>
+    <summary>2025/06/17 2.0.5 Released</summary>
+    <ul>
+      <li>Fixed the issue where models were still required to be downloaded in the <code>sglang-client</code> mode</li>
+      <li>Fixed the issue where the <code>sglang-client</code> mode unnecessarily depended on packages like <code>torch</code> during runtime.</li>
+      <li>Fixed the issue where only the first instance would take effect when attempting to launch multiple <code>sglang-client</code> instances via multiple URLs within the same process</li>
+    </ul>
+  </details>
+  
+  <details>
+    <summary>2025/06/15 2.0.3 released</summary>
+    <ul>
+      <li>Fixed a configuration file key-value update error that occurred when downloading model type was set to <code>all</code></li>
+      <li>Fixed the issue where the formula and table feature toggle switches were not working in <code>command line mode</code>, causing the features to remain enabled.</li>
+      <li>Fixed compatibility issues with sglang version 0.4.7 in the <code>sglang-engine</code> mode.</li>
+      <li>Updated Dockerfile and installation documentation for deploying the full version of MinerU in sglang environment</li>
+    </ul>
+  </details>
+  
+  <details>
+    <summary>2025/06/13 2.0.0 Released</summary>
+    <ul>
+      <li><strong>New Architecture</strong>: MinerU 2.0 has been deeply restructured in code organization and interaction methods, significantly improving system usability, maintainability, and extensibility.
+        <ul>
+          <li><strong>Removal of Third-party Dependency Limitations</strong>: Completely eliminated the dependency on <code>pymupdf</code>, moving the project toward a more open and compliant open-source direction.</li>
+          <li><strong>Ready-to-use, Easy Configuration</strong>: No need to manually edit JSON configuration files; most parameters can now be set directly via command line or API.</li>
+          <li><strong>Automatic Model Management</strong>: Added automatic model download and update mechanisms, allowing users to complete model deployment without manual intervention.</li>
+          <li><strong>Offline Deployment Friendly</strong>: Provides built-in model download commands, supporting deployment requirements in completely offline environments.</li>
+          <li><strong>Streamlined Code Structure</strong>: Removed thousands of lines of redundant code, simplified class inheritance logic, significantly improving code readability and development efficiency.</li>
+          <li><strong>Unified Intermediate Format Output</strong>: Adopted standardized <code>middle_json</code> format, compatible with most secondary development scenarios based on this format, ensuring seamless ecosystem business migration.</li>
+        </ul>
+      </li>
+      <li><strong>New Model</strong>: MinerU 2.0 integrates our latest small-parameter, high-performance multimodal document parsing model, achieving end-to-end high-speed, high-precision document understanding.
+        <ul>
+          <li><strong>Small Model, Big Capabilities</strong>: With parameters under 1B, yet surpassing traditional 72B-level vision-language models (VLMs) in parsing accuracy.</li>
+          <li><strong>Multiple Functions in One</strong>: A single model covers multilingual recognition, handwriting recognition, layout analysis, table parsing, formula recognition, reading order sorting, and other core tasks.</li>
+          <li><strong>Ultimate Inference Speed</strong>: Achieves peak throughput exceeding 10,000 tokens/s through <code>sglang</code> acceleration on a single NVIDIA 4090 card, easily handling large-scale document processing requirements.</li>
+          <li><strong>Online Experience</strong>: You can experience our brand-new VLM model on <a href="https://mineru.net/OpenSourceTools/Extractor">MinerU.net</a>, <a href="https://huggingface.co/spaces/opendatalab/MinerU">Hugging Face</a>, and <a href="https://www.modelscope.cn/studios/OpenDataLab/MinerU">ModelScope</a>.</li>
+        </ul>
+      </li>
+      <li><strong>Incompatible Changes Notice</strong>: To improve overall architectural rationality and long-term maintainability, this version contains some incompatible changes:
+        <ul>
+          <li>Python package name changed from <code>magic-pdf</code> to <code>mineru</code>, and the command-line tool changed from <code>magic-pdf</code> to <code>mineru</code>. Please update your scripts and command calls accordingly.</li>
+          <li>For modular system design and ecosystem consistency considerations, MinerU 2.0 no longer includes the LibreOffice document conversion module. If you need to process Office documents, we recommend converting them to PDF format through an independently deployed LibreOffice service before proceeding with subsequent parsing operations.</li>
+        </ul>
+      </li>
+    </ul>
+  </details>
+  <details>
+  <summary>2025/05/24 Release 1.3.12</summary>
+  <ul>
+      <li>Added support for PPOCRv5 models, updated <code>ch_server</code> model to <code>PP-OCRv5_rec_server</code>, and <code>ch_lite</code> model to <code>PP-OCRv5_rec_mobile</code> (model update required)
+        <ul>
+          <li>In testing, we found that PPOCRv5(server) has some improvement for handwritten documents, but has slightly lower accuracy than v4_server_doc for other document types, so the default ch model remains unchanged as <code>PP-OCRv4_server_rec_doc</code>.</li>
+          <li>Since PPOCRv5 has enhanced recognition capabilities for handwriting and special characters, you can manually choose the PPOCRv5 model for Japanese-Traditional Chinese mixed scenarios and handwritten documents</li>
+          <li>You can select the appropriate model through the lang parameter <code>lang='ch_server'</code> (Python API) or <code>--lang ch_server</code> (command line):
+            <ul>
+              <li><code>ch</code>: <code>PP-OCRv4_server_rec_doc</code> (default) (Chinese/English/Japanese/Traditional Chinese mixed/15K dictionary)</li>
+              <li><code>ch_server</code>: <code>PP-OCRv5_rec_server</code> (Chinese/English/Japanese/Traditional Chinese mixed + handwriting/18K dictionary)</li>
+              <li><code>ch_lite</code>: <code>PP-OCRv5_rec_mobile</code> (Chinese/English/Japanese/Traditional Chinese mixed + handwriting/18K dictionary)</li>
+              <li><code>ch_server_v4</code>: <code>PP-OCRv4_rec_server</code> (Chinese/English mixed/6K dictionary)</li>
+              <li><code>ch_lite_v4</code>: <code>PP-OCRv4_rec_mobile</code> (Chinese/English mixed/6K dictionary)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Added support for handwritten documents through optimized layout recognition of handwritten text areas
+        <ul>
+          <li>This feature is supported by default, no additional configuration required</li>
+          <li>You can refer to the instructions above to manually select the PPOCRv5 model for better handwritten document parsing results</li>
+        </ul>
+      </li>
+      <li>The <code>huggingface</code> and <code>modelscope</code> demos have been updated to versions that support handwriting recognition and PPOCRv5 models, which you can experience online</li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2025/04/29 Release 1.3.10</summary>
+  <ul>
+      <li>Added support for custom formula delimiters, which can be configured by modifying the <code>latex-delimiter-config</code> section in the <code>magic-pdf.json</code> file in your user directory.</li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2025/04/27 Release 1.3.9</summary>
+  <ul>
+      <li>Optimized formula parsing functionality, improved formula rendering success rate</li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2025/04/23 Release 1.3.8</summary>
+  <ul>
+      <li>The default <code>ocr</code> model (<code>ch</code>) has been updated to <code>PP-OCRv4_server_rec_doc</code> (model update required)
+        <ul>
+          <li><code>PP-OCRv4_server_rec_doc</code> is trained on a mixture of more Chinese document data and PP-OCR training data based on <code>PP-OCRv4_server_rec</code>, adding recognition capabilities for some traditional Chinese characters, Japanese, and special characters. It can recognize over 15,000 characters and improves both document-specific and general text recognition abilities.</li>
+          <li><a href="https://paddlepaddle.github.io/PaddleX/latest/module_usage/tutorials/ocr_modules/text_recognition.html#_3">Performance comparison of PP-OCRv4_server_rec_doc/PP-OCRv4_server_rec/PP-OCRv4_mobile_rec</a></li>
+          <li>After verification, the <code>PP-OCRv4_server_rec_doc</code> model shows significant accuracy improvements in Chinese/English/Japanese/Traditional Chinese in both single language and mixed language scenarios, with comparable speed to <code>PP-OCRv4_server_rec</code>, making it suitable for most use cases.</li>
+          <li>In some pure English scenarios, <code>PP-OCRv4_server_rec_doc</code> may have word adhesion issues, while <code>PP-OCRv4_server_rec</code> performs better in these cases. Therefore, we've kept the <code>PP-OCRv4_server_rec</code> model, which users can access by adding the parameter <code>lang='ch_server'</code> (Python API) or <code>--lang ch_server</code> (command line).</li>
+        </ul>
+      </li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2025/04/22 Release 1.3.7</summary>
+  <ul>
+      <li>Fixed the issue where the lang parameter was ineffective during table parsing model initialization</li>
+      <li>Fixed the significant speed reduction of OCR and table parsing in <code>cpu</code> mode</li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2025/04/16 Release 1.3.4</summary>
+  <ul>
+      <li>Slightly improved OCR-det speed by removing some unnecessary blocks</li>
+      <li>Fixed page-internal sorting errors caused by footnotes in certain cases</li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2025/04/12 Release 1.3.2</summary>
+  <ul>
+      <li>Fixed dependency version incompatibility issues when installing on Windows with Python 3.13</li>
+      <li>Optimized memory usage during batch inference</li>
+      <li>Improved parsing of tables rotated 90 degrees</li>
+      <li>Enhanced parsing of oversized tables in financial report samples</li>
+      <li>Fixed the occasional word adhesion issue in English text areas when OCR language is not specified (model update required)</li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2025/04/08 Release 1.3.1</summary>
+  <ul>
+      <li>Fixed several compatibility issues
+        <ul>
+          <li>Added support for Python 3.13</li>
+          <li>Made final adaptations for outdated Linux systems (such as CentOS 7) with no guarantee of continued support in future versions, <a href="https://github.com/opendatalab/MinerU/issues/1004">installation instructions</a></li>
+        </ul>
+      </li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2025/04/03 Release 1.3.0</summary>
+  <ul>
+      <li>Installation and compatibility optimizations
+        <ul>
+          <li>Resolved compatibility issues caused by <code>detectron2</code> by removing <code>layoutlmv3</code> usage in layout</li>
+          <li>Extended torch version compatibility to 2.2~2.6 (excluding 2.5)</li>
+          <li>Added CUDA compatibility for versions 11.8/12.4/12.6/12.8 (CUDA version determined by torch), solving compatibility issues for users with 50-series and H-series GPUs</li>
+          <li>Extended Python compatibility to versions 3.10~3.12, fixing the issue of automatic downgrade to version 0.6.1 when installing in non-3.10 environments</li>
+          <li>Optimized offline deployment process, eliminating the need to download any model files after successful deployment</li>
+        </ul>
+      </li>
+      <li>Performance optimizations
+        <ul>
+          <li>Enhanced parsing speed for batches of small files by supporting batch processing of multiple PDF files (<a href="demo/batch_demo.py">script example</a>), with formula parsing speed improved by up to 1400% and overall parsing speed improved by up to 500% compared to version 1.0.1</li>
+          <li>Reduced memory usage and improved parsing speed by optimizing MFR model loading and usage (requires re-running the <a href="docs/how_to_download_models_zh_cn.md">model download process</a> to get incremental updates to model files)</li>
+          <li>Optimized GPU memory usage, requiring only 6GB minimum to run this project</li>
+          <li>Improved running speed on MPS devices</li>
+        </ul>
+      </li>
+      <li>Parsing effect optimizations
+        <ul>
+          <li>Updated MFR model to <code>unimernet(2503)</code>, fixing line break loss issues in multi-line formulas</li>
+        </ul>
+      </li>
+      <li>Usability optimizations
+        <ul>
+          <li>Completely replaced the <code>paddle</code> framework and <code>paddleocr</code> in the project by using <code>paddleocr2torch</code>, resolving conflicts between <code>paddle</code> and <code>torch</code>, as well as thread safety issues caused by the <code>paddle</code> framework</li>
+          <li>Added real-time progress bar display during parsing, allowing precise tracking of parsing progress and making the waiting process more bearable</li>
+        </ul>
+      </li>
+  </ul>
+  </details>
+  <details>
+  <summary>2025/03/03 1.2.1 released</summary>
+  <ul>
+    <li>Fixed the impact on punctuation marks during full-width to half-width conversion of letters and numbers</li>
+    <li>Fixed caption matching inaccuracies in certain scenarios</li>
+    <li>Fixed formula span loss issues in certain scenarios</li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2025/02/24 1.2.0 released</summary>
+  <p>This version includes several fixes and improvements to enhance parsing efficiency and accuracy:</p>
+  <ul>
+    <li><strong>Performance Optimization</strong>
       <ul>
-        <li><a href="#project-introduction">Project Introduction</a></li>
-        <li><a href="#key-features">Key Features</a></li>
-        <li><a href="#quick-start">Quick Start</a>
-            <ul>
-            <li><a href="#online-demo">Online Demo</a></li>
-            <li><a href="#quick-cpu-demo">Quick CPU Demo</a></li>
-            <li><a href="#using-gpu">Using GPU</a></li>
-            <li><a href="#using-npu">Using NPU</a></li>
-            </ul>
-        </li>
-        <li><a href="#usage">Usage</a>
-            <ul>
-            <li><a href="#command-line">Command Line</a></li>
-            <li><a href="#api">API</a></li>
-            <li><a href="#deploy-derived-projects">Deploy Derived Projects</a></li>
-            <li><a href="#development-guide">Development Guide</a></li>
-            </ul>
-        </li>
+        <li>Increased classification speed for PDF documents in auto mode.</li>
       </ul>
     </li>
-    <li><a href="#todo">TODO</a></li>
-    <li><a href="#known-issues">Known Issues</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#all-thanks-to-our-contributors">All Thanks To Our Contributors</a></li>
-    <li><a href="#license-information">License Information</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-    <li><a href="#citation">Citation</a></li>
-    <li><a href="#star-history">Star History</a></li>
-    <li><a href="#magic-doc">Magic-doc</a></li>
-    <li><a href="#magic-html">Magic-html</a></li>
-    <li><a href="#links">Links</a></li>
-  </ol>
+    <li><strong>Parsing Optimization</strong>
+      <ul>
+        <li>Improved parsing logic for documents containing watermarks, significantly enhancing the parsing results for such documents.</li>
+        <li>Enhanced the matching logic for multiple images/tables and captions within a single page, improving the accuracy of image-text matching in complex layouts.</li>
+      </ul>
+    </li>
+    <li><strong>Bug Fixes</strong>
+      <ul>
+        <li>Fixed an issue where image/table spans were incorrectly filled into text blocks under certain conditions.</li>
+        <li>Resolved an issue where title blocks were empty in some cases.</li>
+      </ul>
+    </li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2025/01/22 1.1.0 released</summary>
+  <p>In this version we have focused on improving parsing accuracy and efficiency:</p>
+  <ul>
+    <li><strong>Model capability upgrade</strong> (requires re-executing the <a href="https://github.com/opendatalab/MinerU/blob/master/docs/how_to_download_models_en.md">model download process</a> to obtain incremental updates of model files)
+      <ul>
+        <li>The layout recognition model has been upgraded to the latest <code>doclayout_yolo(2501)</code> model, improving layout recognition accuracy.</li>
+        <li>The formula parsing model has been upgraded to the latest <code>unimernet(2501)</code> model, improving formula recognition accuracy.</li>
+      </ul>
+    </li>
+    <li><strong>Performance optimization</strong>
+      <ul>
+        <li>On devices that meet certain configuration requirements (16GB+ VRAM), by optimizing resource usage and restructuring the processing pipeline, overall parsing speed has been increased by more than 50%.</li>
+      </ul>
+    </li>
+    <li><strong>Parsing effect optimization</strong>
+      <ul>
+        <li>Added a new heading classification feature (testing version, enabled by default) to the online demo (<a href="https://mineru.net/OpenSourceTools/Extractor">mineru.net</a>/<a href="https://huggingface.co/spaces/opendatalab/MinerU">huggingface</a>/<a href="https://www.modelscope.cn/studios/OpenDataLab/MinerU">modelscope</a>), which supports hierarchical classification of headings, thereby enhancing document structuring.</li>
+      </ul>
+    </li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2025/01/10 1.0.1 released</summary>
+  <p>This is our first official release, where we have introduced a completely new API interface and enhanced compatibility through extensive refactoring, as well as a brand new automatic language identification feature:</p>
+  <ul>
+    <li><strong>New API Interface</strong>
+      <ul>
+        <li>For the data-side API, we have introduced the Dataset class, designed to provide a robust and flexible data processing framework. This framework currently supports a variety of document formats, including images (.jpg and .png), PDFs, Word documents (.doc and .docx), and PowerPoint presentations (.ppt and .pptx). It ensures effective support for data processing tasks ranging from simple to complex.</li>
+        <li>For the user-side API, we have meticulously designed the MinerU processing workflow as a series of composable Stages. Each Stage represents a specific processing step, allowing users to define new Stages according to their needs and creatively combine these stages to customize their data processing workflows.</li>
+      </ul>
+    </li>
+    <li><strong>Enhanced Compatibility</strong>
+      <ul>
+        <li>By optimizing the dependency environment and configuration items, we ensure stable and efficient operation on ARM architecture Linux systems.</li>
+        <li>We have deeply integrated with Huawei Ascend NPU acceleration, providing autonomous and controllable high-performance computing capabilities. This supports the localization and development of AI application platforms in China. <a href="https://github.com/opendatalab/MinerU/blob/master/docs/README_Ascend_NPU_Acceleration_zh_CN.md">Ascend NPU Acceleration</a></li>
+      </ul>
+    </li>
+    <li><strong>Automatic Language Identification</strong>
+      <ul>
+        <li>By introducing a new language recognition model, setting the <code>lang</code> configuration to <code>auto</code> during document parsing will automatically select the appropriate OCR language model, improving the accuracy of scanned document parsing.</li>
+      </ul>
+    </li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2024/11/22 0.10.0 released</summary>
+  <p>Introducing hybrid OCR text extraction capabilities:</p>
+  <ul>
+    <li>Significantly improved parsing performance in complex text distribution scenarios such as dense formulas, irregular span regions, and text represented by images.</li>
+    <li>Combines the dual advantages of accurate content extraction and faster speed in text mode, and more precise span/line region recognition in OCR mode.</li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2024/11/15 0.9.3 released</summary>
+  <p>Integrated <a href="https://github.com/RapidAI/RapidTable">RapidTable</a> for table recognition, improving single-table parsing speed by more than 10 times, with higher accuracy and lower GPU memory usage.</p>
+  </details>
+  
+  <details>
+  <summary>2024/11/06 0.9.2 released</summary>
+  <p>Integrated the <a href="https://huggingface.co/U4R/StructTable-InternVL2-1B">StructTable-InternVL2-1B</a> model for table recognition functionality.</p>
+  </details>
+  
+  <details>
+  <summary>2024/10/31 0.9.0 released</summary>
+  <p>This is a major new version with extensive code refactoring, addressing numerous issues, improving performance, reducing hardware requirements, and enhancing usability:</p>
+  <ul>
+    <li>Refactored the sorting module code to use <a href="https://github.com/ppaanngggg/layoutreader">layoutreader</a> for reading order sorting, ensuring high accuracy in various layouts.</li>
+    <li>Refactored the paragraph concatenation module to achieve good results in cross-column, cross-page, cross-figure, and cross-table scenarios.</li>
+    <li>Refactored the list and table of contents recognition functions, significantly improving the accuracy of list blocks and table of contents blocks, as well as the parsing of corresponding text paragraphs.</li>
+    <li>Refactored the matching logic for figures, tables, and descriptive text, greatly enhancing the accuracy of matching captions and footnotes to figures and tables, and reducing the loss rate of descriptive text to near zero.</li>
+    <li>Added multi-language support for OCR, supporting detection and recognition of 84 languages. For the list of supported languages, see <a href="https://paddlepaddle.github.io/PaddleOCR/latest/en/ppocr/blog/multi_languages.html#5-support-languages-and-abbreviations">OCR Language Support List</a>.</li>
+    <li>Added memory recycling logic and other memory optimization measures, significantly reducing memory usage. The memory requirement for enabling all acceleration features except table acceleration (layout/formula/OCR) has been reduced from 16GB to 8GB, and the memory requirement for enabling all acceleration features has been reduced from 24GB to 10GB.</li>
+    <li>Optimized configuration file feature switches, adding an independent formula detection switch to significantly improve speed and parsing results when formula detection is not needed.</li>
+    <li>Integrated <a href="https://github.com/opendatalab/PDF-Extract-Kit">PDF-Extract-Kit 1.0</a>:
+      <ul>
+        <li>Added the self-developed <code>doclayout_yolo</code> model, which speeds up processing by more than 10 times compared to the original solution while maintaining similar parsing effects, and can be freely switched with <code>layoutlmv3</code> via the configuration file.</li>
+        <li>Upgraded formula parsing to <code>unimernet 0.2.1</code>, improving formula parsing accuracy while significantly reducing memory usage.</li>
+        <li>Due to the repository change for <code>PDF-Extract-Kit 1.0</code>, you need to re-download the model. Please refer to <a href="https://github.com/opendatalab/MinerU/blob/master/docs/how_to_download_models_en.md">How to Download Models</a> for detailed steps.</li>
+      </ul>
+    </li>
+  </ul>
+  </details>
+  
+  <details>
+  <summary>2024/09/27 Version 0.8.1 released</summary>
+  <p>Fixed some bugs, and providing a <a href="https://github.com/opendatalab/MinerU/blob/master/projects/web_demo/README.md">localized deployment version</a> of the <a href="https://opendatalab.com/OpenSourceTools/Extractor/PDF/">online demo</a> and the <a href="https://github.com/opendatalab/MinerU/blob/master/projects/web/README.md">front-end interface</a>.</p>
+  </details>
+  
+  <details>
+  <summary>2024/09/09 Version 0.8.0 released</summary>
+  <p>Supporting fast deployment with Dockerfile, and launching demos on Huggingface and Modelscope.</p>
+  </details>
+  
+  <details>
+  <summary>2024/08/30 Version 0.7.1 released</summary>
+  <p>Add paddle tablemaster table recognition option</p>
+  </details>
+  
+  <details>
+  <summary>2024/08/09 Version 0.7.0b1 released</summary>
+  <p>Simplified installation process, added table recognition functionality</p>
+  </details>
+  
+  <details>
+  <summary>2024/08/01 Version 0.6.2b1 released</summary>
+  <p>Optimized dependency conflict issues and installation documentation</p>
+  </details>
+  
+  <details>
+  <summary>2024/07/05 Initial open-source release</summary>
+  </details>
 </details>
 
 # MinerU
@@ -293,18 +524,26 @@ https://github.com/user-attachments/assets/4bea02c9-6d54-4cd6-97ed-dff14340982c
 - Supports running in a pure CPU environment, and also supports GPU(CUDA)/NPU(CANN)/MPS acceleration
 - Compatible with Windows, Linux, and Mac platforms.
 
-## Quick Start
+# Quick Start
 
 If you encounter any installation issues, please first consult the <a href="#faq">FAQ</a>. </br>
 If the parsing results are not as expected, refer to the <a href="#known-issues">Known Issues</a>. </br>
-There are three different ways to experience MinerU:
 
-- [Online Demo (No Installation Required)](#online-demo)
-- [Quick CPU Demo (Windows, Linux, Mac)](#quick-cpu-demo)
-- Accelerate inference by using CUDA/CANN/MPS
-  - [Linux/Windows + CUDA](#Using-GPU)
-  - [Linux + CANN](#using-npu)
-  - [MacOS + MPS](#using-mps)
+## Online Experience
+
+### Official online web application
+The official online version has the same functionality as the client, with a beautiful interface and rich features, requires login to use  
+ 
+- [![OpenDataLab](https://img.shields.io/badge/webapp_on_mineru.net-blue?logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM0IiBoZWlnaHQ9IjEzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMTIyLDljMCw1LTQsOS05LDlzLTktNC05LTksNC05LDktOSw5LDQsOSw5eiIgZmlsbD0idXJsKCNhKSIvPjxwYXRoIGQ9Im0xMjIsOWMwLDUtNCw5LTksOXMtOS00LTktOSw0LTksOS05LDksNCw5LDl6IiBmaWxsPSIjMDEwMTAxIi8+PHBhdGggZD0ibTkxLDE4YzAsNS00LDktOSw5cy05LTQtOS05LDQtOSw5LTksOSw0LDksOXoiIGZpbGw9InVybCgjYikiLz48cGF0aCBkPSJtOTEsMThjMCw1LTQsOS05LDlzLTktNC05LTksNC05LDktOSw5LDQsOSw5eiIgZmlsbD0iIzAxMDEwMSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMzksNjJjMCwxNiw4LDMwLDIwLDM4LDctNiwxMi0xNiwxMi0yNlY0OWMwLTQsMy03LDYtOGw0Ni0xMmM1LTEsMTEsMywxMSw4djMxYzAsMzctMzAsNjYtNjYsNjYtMzcsMC02Ni0zMC02Ni02NlY0NmMwLTQsMy03LDYtOGwyMC02YzUtMSwxMSwzLDExLDh2MjF6bS0yOSw2YzAsMTYsNiwzMCwxNyw0MCwzLDEsNSwxLDgsMSw1LDAsMTAtMSwxNS0zQzM3LDk1LDI5LDc5LDI5LDYyVjQybC0xOSw1djIweiIgZmlsbD0idXJsKCNjKSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMzksNjJjMCwxNiw4LDMwLDIwLDM4LDctNiwxMi0xNiwxMi0yNlY0OWMwLTQsMy03LDYtOGw0Ni0xMmM1LTEsMTEsMywxMSw4djMxYzAsMzctMzAsNjYtNjYsNjYtMzcsMC02Ni0zMC02Ni02NlY0NmMwLTQsMy03LDYtOGwyMC02YzUtMSwxMSwzLDExLDh2MjF6bS0yOSw2YzAsMTYsNiwzMCwxNyw0MCwzLDEsNSwxLDgsMSw1LDAsMTAtMSwxNS0zQzM3LDk1LDI5LDc5LDI5LDYyVjQybC0xOSw1djIweiIgZmlsbD0iIzAxMDEwMSIvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYyIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48L3N2Zz4=&labelColor=white)](https://mineru.net/OpenSourceTools/Extractor?source=github)
+
+### Gradio-based online demo
+A WebUI developed based on Gradio, with a simple interface and only core parsing functionality, no login required  
+
+- [![ModelScope](https://img.shields.io/badge/Demo_on_ModelScope-purple?logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggaWQ9InN2Z18xNCIgZmlsbD0iIzYyNGFmZiIgZD0ibTAsODkuODRsMjUuNjUsMGwwLDI1LjY0OTk5bC0yNS42NSwwbDAsLTI1LjY0OTk5eiIvPgogIDxwYXRoIGlkPSJzdmdfMTUiIGZpbGw9IiM2MjRhZmYiIGQ9Im05OS4xNCwxMTUuNDlsMjUuNjUsMGwwLDI1LjY1bC0yNS42NSwwbDAsLTI1LjY1eiIvPgogIDxwYXRoIGlkPSJzdmdfMTYiIGZpbGw9IiM2MjRhZmYiIGQ9Im0xNzYuMDksMTQxLjE0bC0yNS42NDk5OSwwbDAsMjIuMTlsNDcuODQsMGwwLC00Ny44NGwtMjIuMTksMGwwLDI1LjY1eiIvPgogIDxwYXRoIGlkPSJzdmdfMTciIGZpbGw9IiMzNmNmZDEiIGQ9Im0xMjQuNzksODkuODRsMjUuNjUsMGwwLDI1LjY0OTk5bC0yNS42NSwwbDAsLTI1LjY0OTk5eiIvPgogIDxwYXRoIGlkPSJzdmdfMTgiIGZpbGw9IiMzNmNmZDEiIGQ9Im0wLDY0LjE5bDI1LjY1LDBsMCwyNS42NWwtMjUuNjUsMGwwLC0yNS42NXoiLz4KICA8cGF0aCBpZD0ic3ZnXzE5IiBmaWxsPSIjNjI0YWZmIiBkPSJtMTk4LjI4LDg5Ljg0bDI1LjY0OTk5LDBsMCwyNS42NDk5OWwtMjUuNjQ5OTksMGwwLC0yNS42NDk5OXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIwIiBmaWxsPSIjMzZjZmQxIiBkPSJtMTk4LjI4LDY0LjE5bDI1LjY0OTk5LDBsMCwyNS42NWwtMjUuNjQ5OTksMGwwLC0yNS42NXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIxIiBmaWxsPSIjNjI0YWZmIiBkPSJtMTUwLjQ0LDQybDAsMjIuMTlsMjUuNjQ5OTksMGwwLDI1LjY1bDIyLjE5LDBsMCwtNDcuODRsLTQ3Ljg0LDB6Ii8+CiAgPHBhdGggaWQ9InN2Z18yMiIgZmlsbD0iIzM2Y2ZkMSIgZD0ibTczLjQ5LDg5Ljg0bDI1LjY1LDBsMCwyNS42NDk5OWwtMjUuNjUsMGwwLC0yNS42NDk5OXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIzIiBmaWxsPSIjNjI0YWZmIiBkPSJtNDcuODQsNjQuMTlsMjUuNjUsMGwwLC0yMi4xOWwtNDcuODQsMGwwLDQ3Ljg0bDIyLjE5LDBsMCwtMjUuNjV6Ii8+CiAgPHBhdGggaWQ9InN2Z18yNCIgZmlsbD0iIzYyNGFmZiIgZD0ibTQ3Ljg0LDExNS40OWwtMjIuMTksMGwwLDQ3Ljg0bDQ3Ljg0LDBsMCwtMjIuMTlsLTI1LjY1LDBsMCwtMjUuNjV6Ii8+CiA8L2c+Cjwvc3ZnPg==&labelColor=white)](https://www.modelscope.cn/studios/OpenDataLab/MinerU)
+- [![HuggingFace](https://img.shields.io/badge/Demo_on_HuggingFace-yellow.svg?logo=data:image/png;base64,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&labelColor=white)](https://huggingface.co/spaces/opendatalab/MinerU)
+
+## Local Deployment
+
 
 > [!WARNING]
 > **Pre-installation Notice—Hardware and Software Environment Support**
@@ -317,181 +556,77 @@ There are three different ways to experience MinerU:
 
 <table>
     <tr>
-        <td colspan="3" rowspan="2">Operating System</td>
+        <td>Parsing Backend</td>
+        <td>pipeline</td>
+        <td>vlm-transformers</td>
+        <td>vlm-sglang</td>
     </tr>
     <tr>
-        <td>Linux after 2019</td>
-        <td>Windows 10 / 11</td>
-        <td>macOS 11+</td>
+        <td>Operating System</td>
+        <td>Linux / Windows / macOS</td>
+        <td>Linux / Windows</td>
+        <td>Linux / Windows (via WSL2)</td>
     </tr>
     <tr>
-        <td colspan="3">CPU</td>
-        <td>x86_64 / arm64</td>
-        <td>x86_64(unsupported ARM Windows)</td>
-        <td>x86_64 / arm64</td>
+        <td>CPU Inference Support</td>
+        <td>✅</td>
+        <td colspan="2">❌</td>
     </tr>
     <tr>
-        <td colspan="3">Memory Requirements</td>
-        <td colspan="3">16GB or more, recommended 32GB+</td>
+        <td>GPU Requirements</td>
+        <td>Turing architecture and later, 6GB+ VRAM or Apple Silicon</td>
+        <td colspan="2">Turing architecture and later, 8GB+ VRAM</td>
     </tr>
     <tr>
-        <td colspan="3">Storage Requirements</td>
-        <td colspan="3">20GB or more, with a preference for SSD</td>
+        <td>Memory Requirements</td>
+        <td colspan="3">Minimum 16GB+, recommended 32GB+</td>
     </tr>
     <tr>
-        <td colspan="3">Python Version</td>
-        <td colspan="3">>=3.10</td>
+        <td>Disk Space Requirements</td>
+        <td colspan="3">20GB+, SSD recommended</td>
     </tr>
     <tr>
-        <td colspan="3">Nvidia Driver Version</td>
-        <td>latest (Proprietary Driver)</td>
-        <td>latest</td>
-        <td>None</td>
-    </tr>
-    <tr>
-        <td colspan="3">CUDA Environment</td>
-        <td>11.8/12.4/12.6/12.8</td>
-        <td>11.8/12.4/12.6/12.8</td>
-        <td>None</td>
-    </tr>
-    <tr>
-        <td colspan="3">CANN Environment(NPU support)</td>
-        <td>8.0+(Ascend 910b)</td>
-        <td>None</td>
-        <td>None</td>
-    </tr>
-    <tr>
-        <td rowspan="2">GPU/MPS Hardware Support List</td>
-        <td colspan="2">GPU VRAM 6GB or more</td>
-        <td colspan="2">All GPUs with Tensor Cores produced from Volta(2017) onwards.<br>
-        More than 6GB VRAM </td>
-        <td rowspan="2">apple slicon</td>
+        <td>Python Version</td>
+        <td colspan="3">3.10-3.13</td>
     </tr>
 </table>
 
-### Online Demo
+### Install MinerU
 
-Synced with dev branch updates:
-
-[![OpenDataLab](https://img.shields.io/badge/Demo_on_OpenDataLab-blue?logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM0IiBoZWlnaHQ9IjEzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMTIyLDljMCw1LTQsOS05LDlzLTktNC05LTksNC05LDktOSw5LDQsOSw5eiIgZmlsbD0idXJsKCNhKSIvPjxwYXRoIGQ9Im0xMjIsOWMwLDUtNCw5LTksOXMtOS00LTktOSw0LTksOS05LDksNCw5LDl6IiBmaWxsPSIjMDEwMTAxIi8+PHBhdGggZD0ibTkxLDE4YzAsNS00LDktOSw5cy05LTQtOS05LDQtOSw5LTksOSw0LDksOXoiIGZpbGw9InVybCgjYikiLz48cGF0aCBkPSJtOTEsMThjMCw1LTQsOS05LDlzLTktNC05LTksNC05LDktOSw5LDQsOSw5eiIgZmlsbD0iIzAxMDEwMSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMzksNjJjMCwxNiw4LDMwLDIwLDM4LDctNiwxMi0xNiwxMi0yNlY0OWMwLTQsMy03LDYtOGw0Ni0xMmM1LTEsMTEsMywxMSw4djMxYzAsMzctMzAsNjYtNjYsNjYtMzcsMC02Ni0zMC02Ni02NlY0NmMwLTQsMy03LDYtOGwyMC02YzUtMSwxMSwzLDExLDh2MjF6bS0yOSw2YzAsMTYsNiwzMCwxNyw0MCwzLDEsNSwxLDgsMSw1LDAsMTAtMSwxNS0zQzM3LDk1LDI5LDc5LDI5LDYyVjQybC0xOSw1djIweiIgZmlsbD0idXJsKCNjKSIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMzksNjJjMCwxNiw4LDMwLDIwLDM4LDctNiwxMi0xNiwxMi0yNlY0OWMwLTQsMy03LDYtOGw0Ni0xMmM1LTEsMTEsMywxMSw4djMxYzAsMzctMzAsNjYtNjYsNjYtMzcsMC02Ni0zMC02Ni02NlY0NmMwLTQsMy03LDYtOGwyMC02YzUtMSwxMSwzLDExLDh2MjF6bS0yOSw2YzAsMTYsNiwzMCwxNyw0MCwzLDEsNSwxLDgsMSw1LDAsMTAtMSwxNS0zQzM3LDk1LDI5LDc5LDI5LDYyVjQybC0xOSw1djIweiIgZmlsbD0iIzAxMDEwMSIvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0iYyIgeDE9Ijg0IiB5MT0iNDEiIHgyPSI3NSIgeTI9IjEyMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTJlMmUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48L3N2Zz4=&labelColor=white)](https://mineru.net/OpenSourceTools/Extractor?source=github)
-[![HuggingFace](https://img.shields.io/badge/Demo_on_HuggingFace-yellow.svg?logo=data:image/png;base64,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&labelColor=white)](https://huggingface.co/spaces/opendatalab/MinerU)
-[![ModelScope](https://img.shields.io/badge/Demo_on_ModelScope-purple?logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBhdGggaWQ9InN2Z18xNCIgZmlsbD0iIzYyNGFmZiIgZD0ibTAsODkuODRsMjUuNjUsMGwwLDI1LjY0OTk5bC0yNS42NSwwbDAsLTI1LjY0OTk5eiIvPgogIDxwYXRoIGlkPSJzdmdfMTUiIGZpbGw9IiM2MjRhZmYiIGQ9Im05OS4xNCwxMTUuNDlsMjUuNjUsMGwwLDI1LjY1bC0yNS42NSwwbDAsLTI1LjY1eiIvPgogIDxwYXRoIGlkPSJzdmdfMTYiIGZpbGw9IiM2MjRhZmYiIGQ9Im0xNzYuMDksMTQxLjE0bC0yNS42NDk5OSwwbDAsMjIuMTlsNDcuODQsMGwwLC00Ny44NGwtMjIuMTksMGwwLDI1LjY1eiIvPgogIDxwYXRoIGlkPSJzdmdfMTciIGZpbGw9IiMzNmNmZDEiIGQ9Im0xMjQuNzksODkuODRsMjUuNjUsMGwwLDI1LjY0OTk5bC0yNS42NSwwbDAsLTI1LjY0OTk5eiIvPgogIDxwYXRoIGlkPSJzdmdfMTgiIGZpbGw9IiMzNmNmZDEiIGQ9Im0wLDY0LjE5bDI1LjY1LDBsMCwyNS42NWwtMjUuNjUsMGwwLC0yNS42NXoiLz4KICA8cGF0aCBpZD0ic3ZnXzE5IiBmaWxsPSIjNjI0YWZmIiBkPSJtMTk4LjI4LDg5Ljg0bDI1LjY0OTk5LDBsMCwyNS42NDk5OWwtMjUuNjQ5OTksMGwwLC0yNS42NDk5OXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIwIiBmaWxsPSIjMzZjZmQxIiBkPSJtMTk4LjI4LDY0LjE5bDI1LjY0OTk5LDBsMCwyNS42NWwtMjUuNjQ5OTksMGwwLC0yNS42NXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIxIiBmaWxsPSIjNjI0YWZmIiBkPSJtMTUwLjQ0LDQybDAsMjIuMTlsMjUuNjQ5OTksMGwwLDI1LjY1bDIyLjE5LDBsMCwtNDcuODRsLTQ3Ljg0LDB6Ii8+CiAgPHBhdGggaWQ9InN2Z18yMiIgZmlsbD0iIzM2Y2ZkMSIgZD0ibTczLjQ5LDg5Ljg0bDI1LjY1LDBsMCwyNS42NDk5OWwtMjUuNjUsMGwwLC0yNS42NDk5OXoiLz4KICA8cGF0aCBpZD0ic3ZnXzIzIiBmaWxsPSIjNjI0YWZmIiBkPSJtNDcuODQsNjQuMTlsMjUuNjUsMGwwLC0yMi4xOWwtNDcuODQsMGwwLDQ3Ljg0bDIyLjE5LDBsMCwtMjUuNjV6Ii8+CiAgPHBhdGggaWQ9InN2Z18yNCIgZmlsbD0iIzYyNGFmZiIgZD0ibTQ3Ljg0LDExNS40OWwtMjIuMTksMGwwLDQ3Ljg0bDQ3Ljg0LDBsMCwtMjIuMTlsLTI1LjY1LDBsMCwtMjUuNjV6Ii8+CiA8L2c+Cjwvc3ZnPg==&labelColor=white)](https://www.modelscope.cn/studios/OpenDataLab/MinerU)
-
-### Quick CPU Demo
-
-#### 1. Install magic-pdf
-
+#### Install MinerU using pip or uv
 ```bash
-conda create -n mineru 'python>=3.10' -y
-conda activate mineru
-pip install -U "magic-pdf[full]"
+pip install --upgrade pip
+pip install uv
+uv pip install -U "mineru[core]"
 ```
 
-#### 2. Download model weight files
-
-Refer to [How to Download Model Files](docs/how_to_download_models_en.md) for detailed instructions.
-
-#### 3. Modify the Configuration File for Additional Configuration
-
-After completing the [2. Download model weight files](#2-download-model-weight-files) step, the script will automatically generate a `magic-pdf.json` file in the user directory and configure the default model path.
-You can find the `magic-pdf.json` file in your 【user directory】.
+#### Install MinerU from source code
+```bash
+git clone https://github.com/opendatalab/MinerU.git
+cd MinerU
+uv pip install -e .[core]
+```
 
 > [!TIP]
-> The user directory for Windows is "C:\\Users\\username", for Linux it is "/home/username", and for macOS it is "/Users/username".
+> `mineru[core]` includes all core features except `sglang` acceleration, compatible with Windows / Linux / macOS systems, suitable for most users.
+> If you need to use `sglang` acceleration for VLM model inference or install a lightweight client on edge devices, please refer to the documentation [Extension Modules Installation Guide](https://opendatalab.github.io/MinerU/quick_start/extension_modules/).
 
-You can modify certain configurations in this file to enable or disable features, such as table recognition:
+---
+ 
+#### Deploy MinerU using Docker
+MinerU provides a convenient Docker deployment method, which helps quickly set up the environment and solve some tricky environment compatibility issues.
+You can get the [Docker Deployment Instructions](https://opendatalab.github.io/MinerU/quick_start/docker_deployment/) in the documentation.
 
+---
 
-> [!NOTE]
-> If the following items are not present in the JSON, please manually add the required items and remove the comment content (standard JSON does not support comments).
+### Using MinerU
 
-```json
-{
-    // other config
-    "layout-config": {
-        "model": "doclayout_yolo" 
-    },
-    "formula-config": {
-        "mfd_model": "yolo_v8_mfd",
-        "mfr_model": "unimernet_small",
-        "enable": true  // The formula recognition feature is enabled by default. If you need to disable it, please change the value here to "false".
-    },
-    "table-config": {
-        "model": "rapid_table", 
-        "sub_model": "slanet_plus",
-        "enable": true, // The table recognition feature is enabled by default. If you need to disable it, please change the value here to "false".
-        "max_time": 400
-    }
-}
+The simplest command line invocation is:
+```bash
+mineru -p <input_path> -o <output_path>
 ```
 
-### Using GPU
-
-If your device supports CUDA and meets the GPU requirements of the mainline environment, you can use GPU acceleration. Please select the appropriate guide based on your system:
-
-- [Ubuntu 22.04 LTS + GPU](docs/README_Ubuntu_CUDA_Acceleration_en_US.md)
-- [Windows 10/11 + GPU](docs/README_Windows_CUDA_Acceleration_en_US.md)
-- Quick Deployment with Docker
-> [!IMPORTANT]
-> Docker requires a GPU with at least 6GB of VRAM, and all acceleration features are enabled by default.
->
-> Before running this Docker, you can use the following command to check if your device supports CUDA acceleration on Docker.
-> 
-> ```bash
-> docker run --rm --gpus=all nvidia/cuda:12.1.0-base-ubuntu22.04 nvidia-smi
-> ```
-  ```bash
-  wget https://github.com/opendatalab/MinerU/raw/master/docker/global/Dockerfile -O Dockerfile
-  docker build -t mineru:latest .
-  docker run -it --name mineru --gpus=all mineru:latest /bin/bash -c "echo 'source /opt/mineru_venv/bin/activate' >> ~/.bashrc && exec bash"
-  magic-pdf --help
-  ```
-
-### Using NPU
-
-If your device has NPU acceleration hardware, you can follow the tutorial below to use NPU acceleration:
-
-[Ascend NPU Acceleration](docs/README_Ascend_NPU_Acceleration_zh_CN.md)
-
-### Using MPS
-
-If your device uses Apple silicon chips, you can enable MPS acceleration for your tasks.
-
-You can enable MPS acceleration by setting the `device-mode` parameter to `mps` in the `magic-pdf.json` configuration file.
-
-```json
-{
-    // other config
-    "device-mode": "mps"
-}
-```
-
-
-## Usage
-
-### Command Line
-
-[Using MinerU via Command Line](https://mineru.readthedocs.io/en/latest/user_guide/usage/command_line.html)
-
-> [!TIP]
-> For more information about the output files, please refer to the [Output File Description](docs/output_file_en_us.md).
-
-### API
-
-[Using MinerU via Python API](https://mineru.readthedocs.io/en/latest/user_guide/usage/api.html)
-
-
-### Deploy Derived Projects
-
-Derived projects include secondary development projects based on MinerU by project developers and community developers,  
-such as application interfaces based on Gradio, RAG based on llama, web demos similar to the official website, lightweight multi-GPU load balancing client/server ends, etc.
-These projects may offer more features and a better user experience.  
-For specific deployment methods, please refer to the [Derived Project README](projects/README.md)
-
-
-### Development Guide
-
-TODO
+You can use MinerU for PDF parsing through various methods such as command line, API, and WebUI. For detailed instructions, please refer to the [Usage Guide](https://opendatalab.github.io/MinerU/usage/).
 
 # TODO
 
@@ -499,6 +634,9 @@ TODO
 - [x] Recognition of `index` and `list` in the main text  
 - [x] Table recognition
 - [x] Heading Classification
+- [x] Handwritten Text Recognition  
+- [x] Vertical Text Recognition  
+- [x] Latin Accent Mark Recognition
 - [ ] Code block recognition in the main text
 - [ ] [Chemical formula recognition](docs/chemical_knowledge_introduction/introduction.pdf)
 - [ ] Geometric shape recognition
@@ -506,7 +644,7 @@ TODO
 # Known Issues
 
 - Reading order is determined by the model based on the spatial distribution of readable content, and may be out of order in some areas under extremely complex layouts.
-- Vertical text is not supported.
+- Limited support for vertical text.
 - Tables of contents and lists are recognized through rules, and some uncommon list formats may not be recognized.
 - Code blocks are not yet supported in the layout model.
 - Comic books, art albums, primary school textbooks, and exercises cannot be parsed well.
@@ -516,9 +654,9 @@ TODO
 
 # FAQ
 
-[FAQ in Chinese](docs/FAQ_zh_cn.md)
-
-[FAQ in English](docs/FAQ_en_us.md)
+- If you encounter any issues during usage, you can first check the [FAQ](https://opendatalab.github.io/MinerU/faq/) for solutions.  
+- If your issue remains unresolved, you may also use [DeepWiki](https://deepwiki.com/opendatalab/MinerU) to interact with an AI assistant, which can address most common problems.  
+- If you still cannot resolve the issue, you are welcome to join our community via [Discord](https://discord.gg/Tdedn9GTXq) or [WeChat](https://mineru.net/community-portal/?aliasId=3c430f94) to discuss with other users and developers.
 
 # All Thanks To Our Contributors
 
@@ -530,21 +668,24 @@ TODO
 
 [LICENSE.md](LICENSE.md)
 
-This project currently uses PyMuPDF to achieve advanced functionality. However, since it adheres to the AGPL license, it may impose restrictions on certain usage scenarios. In future iterations, we plan to explore and replace it with a more permissive PDF processing library to enhance user-friendliness and flexibility.
+Currently, some models in this project are trained based on YOLO. However, since YOLO follows the AGPL license, it may impose restrictions on certain use cases. In future iterations, we plan to explore and replace these with models under more permissive licenses to enhance user-friendliness and flexibility.
 
 # Acknowledgments
 
 - [PDF-Extract-Kit](https://github.com/opendatalab/PDF-Extract-Kit)
 - [DocLayout-YOLO](https://github.com/opendatalab/DocLayout-YOLO)
-- [StructEqTable](https://github.com/UniModal4Reasoning/StructEqTable-Deploy)
+- [UniMERNet](https://github.com/opendatalab/UniMERNet)
 - [RapidTable](https://github.com/RapidAI/RapidTable)
+- [TableStructureRec](https://github.com/RapidAI/TableStructureRec)
 - [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
-- [RapidOCR](https://github.com/RapidAI/RapidOCR)
 - [PaddleOCR2Pytorch](https://github.com/frotms/PaddleOCR2Pytorch)
-- [PyMuPDF](https://github.com/pymupdf/PyMuPDF)
 - [layoutreader](https://github.com/ppaanngggg/layoutreader)
+- [xy-cut](https://github.com/Sanster/xy-cut)
 - [fast-langdetect](https://github.com/LlmKira/fast-langdetect)
+- [pypdfium2](https://github.com/pypdfium2-team/pypdfium2)
+- [pdftext](https://github.com/datalab-to/pdftext)
 - [pdfminer.six](https://github.com/pdfminer/pdfminer.six)
+- [pypdf](https://github.com/py-pdf/pypdf)
 
 # Citation
 
@@ -577,16 +718,13 @@ This project currently uses PyMuPDF to achieve advanced functionality. However, 
  </picture>
 </a>
 
-# Magic-doc
-
-[Magic-Doc](https://github.com/InternLM/magic-doc) Fast speed ppt/pptx/doc/docx/pdf extraction tool
-
-# Magic-html
-
-[Magic-HTML](https://github.com/opendatalab/magic-html) Mixed web page extraction tool
 
 # Links
-
+- [Easy Data Preparation with latest LLMs-based Operators and Pipelines](https://github.com/OpenDCAI/DataFlow)
+- [Vis3 (OSS browser based on s3)](https://github.com/opendatalab/Vis3)
 - [LabelU (A Lightweight Multi-modal Data Annotation Tool)](https://github.com/opendatalab/labelU)
 - [LabelLLM (An Open-source LLM Dialogue Annotation Platform)](https://github.com/opendatalab/LabelLLM)
 - [PDF-Extract-Kit (A Comprehensive Toolkit for High-Quality PDF Content Extraction)](https://github.com/opendatalab/PDF-Extract-Kit)
+- [OmniDocBench (A Comprehensive Benchmark for Document Parsing and Evaluation)](https://github.com/opendatalab/OmniDocBench)
+- [Magic-HTML (Mixed web page extraction tool)](https://github.com/opendatalab/magic-html)
+- [Magic-Doc (Fast speed ppt/pptx/doc/docx/pdf extraction tool)](https://github.com/InternLM/magic-doc) 
