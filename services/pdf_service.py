@@ -228,9 +228,9 @@ async def magic_pdf_parse_main(
                     if os.path.exists(result_file_path):
                         os.remove(result_file_path)
 
-                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_origin.pdf")
-                    if os.path.exists(result_file_path):
-                        os.remove(result_file_path)
+                    # result_file_path = os.path.join(parse_dir, f"{pdf_name}_origin.pdf")
+                    # if os.path.exists(result_file_path):
+                    #     os.remove(result_file_path)
     
                     result_file_path = os.path.join(parse_dir, f"{pdf_name}_span.pdf")
                     if os.path.exists(result_file_path):
@@ -308,12 +308,12 @@ async def magic_pdf_parse_main2(file:UploadFile,
         if not os.path.exists(output_path):
             os.makedirs(output_path)
         
-        #把文件复制到目标文件夹
+         #把文件复制到目标文件夹
         copy_file_path=os.path.join(output_path,pdf_name)
 
-        # 写入本地文件
-        with open(copy_file_path, "wb") as f:
-            f.write(pdf_bytes)
+        # # 写入本地文件
+        # with open(copy_file_path, "wb") as f:
+        #     f.write(pdf_bytes)
 
         # 处理上传的PDF文件
         pdf_file_names = []
@@ -324,6 +324,7 @@ async def magic_pdf_parse_main2(file:UploadFile,
 
         pdf_bytes_list.append(pdf_bytes)
         pdf_file_names.append(Path(copy_file_path).stem)
+        
 
         # 设置语言列表，确保与文件数量一致
         actual_lang_list = lang_list
@@ -434,7 +435,15 @@ async def upload(file:UploadFile):
 
     return magic_pdf_parse_main2()
 
-
+#folder_paths分号分隔
+async def magic_pdf_parse_main_batch_all(folder_paths:str="",
+    parse_method: str="auto",
+    lang_list: list[str] = ["ch"]):
+    paths = folder_paths.split(";")
+    for folder_path in paths:
+        await magic_pdf_parse_main_batch(folder_path=folder_path, parse_method=parse_method, lang_list=lang_list)
+    
+    
 
 async def magic_pdf_parse_main_batch(
     folder_path:str="",
@@ -464,7 +473,7 @@ async def magic_pdf_parse_main_batch(
     for root, _, files in os.walk(folder_path):
         for file_name in files:
             # 文件名去除_layout.pdf或其他干扰，避免误处理文件
-            if file_name.lower().endswith(".pdf") and "_layout" not in file_name:
+            if file_name.lower().endswith(".pdf") and "_layout" not in file_name and  "_origin" not in file_name:
                 name_without_suff = Path(file_name).stem
                 if name_without_suff not in processed_files:
                     file_path = os.path.join(root, file_name)
