@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  mu-server:
+    image: mu:latest
+    container_name: mu-server
+    working_dir: /app
+    restart: unless-stopped
+    ports:
+      - "8091:8090"
+    environment:
+      - MINERU_TOOLS_CONFIG_JSON=/app/models/custom.json
+    volumes:
+      - ./temp_files/:/app/temp_files
+      - ./batch_files/:/app/batch_files
+      - ./home/hbcpdi/project/Model/:/app/models
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all  # 使用全部GPU
+              capabilities: [gpu]
+    command: bash -c "python ./api.pyc"
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8502:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./temp_files/:/temp_files
