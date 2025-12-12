@@ -400,6 +400,15 @@ async def magic_pdf_parse_main2(file:UploadFile,
                     if os.path.exists(result_file_path):
                         os.remove(result_file_path)
 
+                # 直接删除的文件
+                result_file_path = os.path.join(parse_dir, f"{pdf_name}.md")
+                if os.path.exists(result_file_path):
+                    os.remove(result_file_path)
+
+                result_file_path = os.path.join(parse_dir, f"{pdf_name}_model_output.txt")
+                if os.path.exists(result_file_path):
+                    os.remove(result_file_path)
+
                 # 复制 parse_dir 中的所有内容到 output_path
                 for item in os.listdir(parse_dir):
                     src = os.path.join(parse_dir, item)
