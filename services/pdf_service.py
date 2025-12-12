@@ -228,9 +228,9 @@ async def magic_pdf_parse_main(
                     if os.path.exists(result_file_path):
                         os.remove(result_file_path)
 
-                    # result_file_path = os.path.join(parse_dir, f"{pdf_name}_origin.pdf")
-                    # if os.path.exists(result_file_path):
-                    #     os.remove(result_file_path)
+                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_origin.pdf")
+                    if os.path.exists(result_file_path):
+                        os.remove(result_file_path)
     
                     result_file_path = os.path.join(parse_dir, f"{pdf_name}_span.pdf")
                     if os.path.exists(result_file_path):
@@ -311,9 +311,9 @@ async def magic_pdf_parse_main2(file:UploadFile,
          #把文件复制到目标文件夹
         copy_file_path=os.path.join(output_path,pdf_name)
 
-        # # 写入本地文件
-        # with open(copy_file_path, "wb") as f:
-        #     f.write(pdf_bytes)
+        # 写入本地文件
+        with open(copy_file_path, "wb") as f:
+            f.write(pdf_bytes)
 
         # 处理上传的PDF文件
         pdf_file_names = []
@@ -365,25 +365,25 @@ async def magic_pdf_parse_main2(file:UploadFile,
             if os.path.exists(parse_dir):
                 # 是否要删除处理文件
                 if is_save_local==False:
-                    result_file_path = os.path.join(parse_dir, f"{pdf_name}.md")
-                    if os.path.exists(result_file_path):
-                        os.remove(result_file_path)
+                    # result_file_path = os.path.join(parse_dir, f"{pdf_name}.md")
+                    # if os.path.exists(result_file_path):
+                    #     os.remove(result_file_path)
 
                     result_file_path = os.path.join(parse_dir, f"{pdf_name}_middle.json")
                     if os.path.exists(result_file_path):
                         os.remove(result_file_path)
 
-                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_model.json")
-                    if os.path.exists(result_file_path):
-                        os.remove(result_file_path)
+                    # result_file_path = os.path.join(parse_dir, f"{pdf_name}_model.json")
+                    # if os.path.exists(result_file_path):
+                    #     os.remove(result_file_path)
 
-                    result_file_path = os.path.join(parse_dir, f"{pdf_name}.pdf")
-                    if os.path.exists(result_file_path):
-                        os.remove(result_file_path)
+                    # result_file_path = os.path.join(parse_dir, f"{pdf_name}.pdf")
+                    # if os.path.exists(result_file_path):
+                    #     os.remove(result_file_path)
 
-                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_model_output.txt")
-                    if os.path.exists(result_file_path):
-                        os.remove(result_file_path)
+                    # result_file_path = os.path.join(parse_dir, f"{pdf_name}_model_output.txt")
+                    # if os.path.exists(result_file_path):
+                    #     os.remove(result_file_path)
 
                     result_file_path = os.path.join(parse_dir, f"{pdf_name}_content_list.json")
                     if os.path.exists(result_file_path):
@@ -397,18 +397,34 @@ async def magic_pdf_parse_main2(file:UploadFile,
                     if os.path.exists(result_file_path):
                         os.remove(result_file_path)
     
-                    result_file_path = os.path.join(parse_dir, f"{pdf_name}_span.pdf")
-                    if os.path.exists(result_file_path):
-                        os.remove(result_file_path)
+                    # result_file_path = os.path.join(parse_dir, f"{pdf_name}_span.pdf")
+                    # if os.path.exists(result_file_path):
+                    #     os.remove(result_file_path)
 
-                # 直接删除的文件
+                # 移除不相关文件
                 result_file_path = os.path.join(parse_dir, f"{pdf_name}.md")
+                if os.path.exists(result_file_path):
+                    os.remove(result_file_path)
+
+                result_file_path = os.path.join(parse_dir, f"{pdf_name}_model.json")
+                if os.path.exists(result_file_path):
+                    os.remove(result_file_path)
+
+                result_file_path = os.path.join(parse_dir, f"{pdf_name}.pdf")
                 if os.path.exists(result_file_path):
                     os.remove(result_file_path)
 
                 result_file_path = os.path.join(parse_dir, f"{pdf_name}_model_output.txt")
                 if os.path.exists(result_file_path):
                     os.remove(result_file_path)
+
+                result_file_path = os.path.join(parse_dir, f"{pdf_name}_span.pdf")
+                if os.path.exists(result_file_path):
+                    os.remove(result_file_path)
+
+                result_file_path = os.path.join(parse_dir, f"{pdf_name}")
+                if os.path.exists(result_file_path):
+                    shutil.rmtree(result_file_path)
 
                 # 复制 parse_dir 中的所有内容到 output_path
                 for item in os.listdir(parse_dir):
@@ -429,6 +445,11 @@ async def magic_pdf_parse_main2(file:UploadFile,
                 
                 # 级联删除 parse_dir
                 shutil.rmtree(parse_dir)
+
+                # 删除复制的文件夹
+                result_file_path = os.path.join(output_path, f"{pdf_name}")
+                if os.path.exists(result_file_path):
+                    shutil.rmtree(result_file_path)
 
         return result
     
