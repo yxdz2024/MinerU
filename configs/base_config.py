@@ -12,4 +12,4 @@ VERSION="0.0.1"
 '''
 默认解析临时文件地址
 '''
-MAGIC_PDF_IMG_URL="http://192.168.0.110:8090"
+MAGIC_PDF_IMG_URL="http://192.168.88.244:8092"

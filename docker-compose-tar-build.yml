@@ -1,14 +1,15 @@
+# 用于构建mu镜像
 version: '3.4'
 
 services:
   mu:
-    image: python310-vllm-re:latest
+    image: python310-llm-base:latest
     container_name: mu
     working_dir: /app
     
     # 挂载当前目录到容器的 /app 目录
     volumes:
-      - ./:/app
+      - ./:/host_src
     
     # 安装依赖并运行（自动检测 requirements.txt 变化）
-    command: bash -c "pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --no-deps && ./build.sh"
+    command: bash -c "cp -r /host_src/* /app/ && pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --no-deps && ./build.sh"
