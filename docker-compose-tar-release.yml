@@ -14,6 +14,7 @@ services:
     volumes:
       - ./temp_files/:/app/temp_files
       - ./batch_files/:/app/batch_files
+      - ./custom.json:/app/custom.json
       - /home/hbcpdi/project/Model/:/app/models
     deploy:
       resources:
