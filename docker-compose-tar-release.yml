@@ -7,6 +7,7 @@ services:
     container_name: mu-server
     working_dir: /app
     restart: unless-stopped
+    shm_size: '128g'  # 设置共享内存大小
     ports:
       - "8091:8090"
     environment:

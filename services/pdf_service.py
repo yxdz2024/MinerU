@@ -11,7 +11,7 @@ from typing import List, Optional
 from glob import glob
 from base64 import b64encode
 
-from configs.base_config import MAGIC_PDF_IMG_URL
+from configs.base_config import MAGIC_PDF_IMG_URL, VLLM_CONFIG
 
 from domain.dto.base_dto import BaseResultModel
 from domain.dto.output.magic_pdf_parse_main_output import ImageData, MagicPdfParseMainOutput
@@ -92,6 +92,8 @@ async def magic_pdf_parse_main(
     :param end_page_id: End page ID for parsing, default is None (parse all pages until the end of the document)
     :param config: 启动配置
     """
+
+    config = VLLM_CONFIG or {}
 
     result=BaseResultModel()
 
@@ -286,6 +288,8 @@ async def magic_pdf_parse_main2(file:UploadFile,
     :param end_page_id: End page ID for parsing, default is None (parse all pages until the end of the document)
     :param config: 启动配置
     """
+
+    config = VLLM_CONFIG or {}
 
     result=BaseResultModel()
     try:
