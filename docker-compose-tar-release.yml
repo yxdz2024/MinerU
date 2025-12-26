@@ -17,6 +17,7 @@ services:
       - ./batch_files/:/app/batch_files
       - ./custom.json:/app/custom.json
       - /home/hbcpdi/project/Model/:/app/models
+      - ./fonts:/usr/share/fonts 
     deploy:
       resources:
         reservations:
