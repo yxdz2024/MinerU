@@ -1,10 +1,10 @@
-# 用于构建mu镜像
+# 用于构建digger镜像
 version: '3.4'
 
 services:
-  mu:
+  digger:
     image: python310-llm-base:latest
-    container_name: mu
+    container_name: digger
     working_dir: /app
     
     # 挂载当前目录到容器的 /app 目录

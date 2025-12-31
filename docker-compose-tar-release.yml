@@ -2,9 +2,9 @@
 version: '3.4'
 
 services:
-  mu-server:
-    image: mu:latest
-    container_name: mu-server
+  digger-server:
+    image: digger:latest
+    container_name: digger-server
     working_dir: /app
     restart: unless-stopped
     shm_size: '128g'  # 设置共享内存大小
@@ -27,7 +27,7 @@ services:
               capabilities: [gpu]
     command: bash -c "python ./api.pyc"
 
-  mu-nginx:
+  digger-nginx:
     image: nginx:latest
     ports:
       - "8092:80"
